@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#C8102E">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<title>Sambat · सम्बत — Three Eras, One Calendar</title>
+<title>Sambat · सम्बत — Full Year Nepali Calendar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -48,7 +47,7 @@ body{
 .wrap{max-width:640px;margin:0 auto;padding:0 12px}
 button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit}
 
-/* ═══════════ TOP BAR ═══════════ */
+/* TOP BAR */
 .topbar{
   position:sticky; top:0; z-index:50;
   padding-top:var(--safe-t);
@@ -72,22 +71,17 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 .icon-btn{
   width:34px;height:34px;border-radius:10px;border:1px solid var(--line);
   background:var(--card);color:var(--text);
-  display:grid;place-items:center;font-size:14px;
-  transition:.15s;
+  display:grid;place-items:center;font-size:14px;transition:.15s;
 }
 .icon-btn:active{transform:scale(.92)}
 .seg{display:flex;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:2px;gap:1px}
-.seg button{
-  padding:5px 8px;border-radius:8px;font-size:11px;font-weight:700;
-  color:var(--muted);transition:.15s;
-}
+.seg button{padding:5px 8px;border-radius:8px;font-size:11px;font-weight:700;color:var(--muted);transition:.15s}
 .seg button.active{background:var(--primary);color:var(--primary-ink)}
 
-/* ═══════════ MODE SWITCH ═══════════ */
+/* MODE SWITCH */
 .mode-switch-wrap{
-  margin-top:14px;
-  background:var(--card);border:1px solid var(--line);border-radius:16px;
-  padding:5px;box-shadow:var(--shadow);
+  margin-top:14px;background:var(--card);border:1px solid var(--line);
+  border-radius:16px;padding:5px;box-shadow:var(--shadow);
 }
 .mode-switch{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
 .mode-btn{
@@ -97,24 +91,21 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 }
 .mode-btn .m-ne{font-family:'Noto Sans Devanagari';font-size:14px;font-weight:700;line-height:1.1}
 .mode-btn .m-en{font-size:9px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;opacity:.7}
-.mode-btn .m-month{font-size:9.5px;color:var(--muted);font-family:'Noto Sans Devanagari';margin-top:1px}
 .mode-btn.active{
   background:linear-gradient(160deg,var(--primary),#8E0A20);
   color:#fff;box-shadow:0 6px 16px -8px rgba(200,16,46,.7);
 }
 .mode-btn.active .m-en{opacity:.85}
-.mode-btn.active .m-month{color:rgba(255,255,255,.82)}
 .mode-btn[data-mode="ad"].active{background:linear-gradient(160deg,#1D6FB8,#134B7E);box-shadow:0 6px 16px -8px rgba(29,111,184,.7)}
 .mode-btn[data-mode="ns"].active{background:linear-gradient(160deg,#B8860B,#8A6308);box-shadow:0 6px 16px -8px rgba(154,107,15,.7)}
 
-/* ═══════════ HERO ═══════════ */
+/* HERO */
 .hero{
   margin-top:12px;
   background:linear-gradient(135deg,#8E0A20 0%,#C8102E 48%,#E03A2F 100%);
-  border-radius:16px;padding:16px 16px;color:#fff;
+  border-radius:16px;padding:16px;color:#fff;
   box-shadow:0 14px 32px -20px rgba(200,16,46,.75);
-  position:relative;overflow:hidden;
-  transition:background .35s;
+  position:relative;overflow:hidden;transition:background .35s;
 }
 .hero[data-mode="ad"]{background:linear-gradient(135deg,#134B7E 0%,#1D6FB8 48%,#2A8AD6 100%);box-shadow:0 14px 32px -20px rgba(29,111,184,.75)}
 .hero[data-mode="ns"]{background:linear-gradient(135deg,#8A6308 0%,#B8860B 48%,#D9A420 100%);box-shadow:0 14px 32px -20px rgba(154,107,15,.75)}
@@ -124,10 +115,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   opacity:.82;font-weight:700;margin-bottom:5px;
   display:flex;align-items:center;gap:6px;
 }
-.live-dot{
-  width:5px;height:5px;border-radius:50%;background:#4ADE80;
-  animation:pulse 2s infinite;
-}
+.live-dot{width:5px;height:5px;border-radius:50%;background:#4ADE80;animation:pulse 2s infinite}
 @keyframes pulse{
   0%{box-shadow:0 0 0 0 rgba(74,222,128,.7)}
   70%{box-shadow:0 0 0 6px rgba(74,222,128,0)}
@@ -135,32 +123,23 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 }
 .hero-main-value{
   font-family:'Noto Sans Devanagari';font-size:26px;font-weight:700;
-  line-height:1.15;letter-spacing:-.4px;
-  position:relative;z-index:1;
+  line-height:1.15;letter-spacing:-.4px;position:relative;z-index:1;
 }
 .hero-main-value.latin{font-family:'Inter';letter-spacing:-.8px;font-size:24px}
 .hero-sub{
   font-size:12px;opacity:.9;margin-top:3px;
-  display:flex;align-items:center;gap:7px;flex-wrap:wrap;
-  position:relative;z-index:1;
+  display:flex;align-items:center;gap:7px;flex-wrap:wrap;position:relative;z-index:1;
 }
 .hero-sub .sep{opacity:.4}
 .hero-time{
   font-variant-numeric:tabular-nums;font-weight:600;
-  background:rgba(255,255,255,.14);
-  padding:1px 7px;border-radius:99px;
-  border:1px solid rgba(255,255,255,.18);
-  font-size:11.5px;
+  background:rgba(255,255,255,.14);padding:1px 7px;border-radius:99px;
+  border:1px solid rgba(255,255,255,.18);font-size:11.5px;
 }
-.hero-pills{
-  display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;
-  position:relative;z-index:1;
-}
+.hero-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;position:relative;z-index:1}
 .pill{
-  background:rgba(255,255,255,.14);
-  border:1px solid rgba(255,255,255,.22);
-  border-radius:10px;padding:6px 10px;
-  flex:1 1 calc(50% - 3px);min-width:0;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+  border-radius:10px;padding:6px 10px;flex:1 1 calc(50% - 3px);min-width:0;
   backdrop-filter:blur(6px);
 }
 .pill-k{
@@ -172,11 +151,10 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 
-/* ═══════════ CARD ═══════════ */
+/* CARD */
 .card{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  box-shadow:var(--shadow);overflow:hidden;
-  margin-top:12px;
+  box-shadow:var(--shadow);overflow:hidden;margin-top:12px;
 }
 .card-head{
   padding:12px 14px 10px;border-bottom:1px solid var(--line);
@@ -185,7 +163,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 .card-title{font-size:12px;font-weight:700;letter-spacing:.3px}
 .card-title span{font-family:'Noto Sans Devanagari'}
 
-/* ═══════════ CALENDAR ═══════════ */
+/* CALENDAR */
 .cal-head{
   padding:14px 14px 10px;display:flex;align-items:flex-start;
   justify-content:space-between;gap:10px;
@@ -200,8 +178,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 .nav-btn{
   height:30px;min-width:30px;padding:0 9px;border-radius:9px;
   border:1px solid var(--line);background:var(--card-2);color:var(--text);
-  font-size:13px;font-weight:600;display:grid;place-items:center;
-  transition:.15s;
+  font-size:13px;font-weight:600;display:grid;place-items:center;transition:.15s;
 }
 .nav-btn:active{transform:scale(.92)}
 .nav-btn.today{font-family:'Noto Sans Devanagari';font-size:11.5px}
@@ -209,10 +186,47 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 .cal-accent[data-mode="ad"]{background:var(--blue)}
 .cal-accent[data-mode="ns"]{background:var(--accent)}
 
-.dow-row{
-  display:grid;grid-template-columns:repeat(7,1fr);gap:3px;
-  padding:0 10px 5px;
+/* YEAR NAV */
+.year-nav{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:6px 14px 8px;
 }
+.year-btn{
+  width:30px;height:30px;border-radius:9px;
+  border:1px solid var(--line);background:var(--card-2);color:var(--text);
+  font-size:14px;font-weight:700;display:grid;place-items:center;
+  transition:.15s;
+}
+.year-btn:active{transform:scale(.9);background:var(--primary-soft);border-color:var(--primary);color:var(--primary)}
+.year-btn:disabled{opacity:.3;pointer-events:none}
+.year-display{
+  font-family:'Noto Sans Devanagari';font-size:16px;font-weight:700;
+  min-width:70px;text-align:center;letter-spacing:.3px;
+}
+.year-display.latin{font-family:'Inter'}
+
+/* MONTH CHIPS */
+.month-chips{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:4px;
+  padding:0 12px 10px;
+}
+.month-chip{
+  padding:6px 3px;border-radius:8px;
+  border:1px solid var(--line);background:var(--card-2);color:var(--muted);
+  font-size:10.5px;font-weight:700;text-align:center;
+  font-family:'Noto Sans Devanagari';line-height:1.2;
+  transition:.15s;
+}
+.month-chip:active{transform:scale(.94)}
+.month-chip.active{
+  background:var(--primary);border-color:var(--primary);color:var(--primary-ink);
+  box-shadow:0 4px 10px -4px rgba(200,16,46,.6);
+}
+.month-chip.active.latin{font-family:'Inter'}
+[data-mode-wrap="ad"] .month-chip.active{background:var(--blue);border-color:var(--blue);box-shadow:0 4px 10px -4px rgba(29,111,184,.6)}
+[data-mode-wrap="ns"] .month-chip.active{background:var(--accent);border-color:var(--accent);box-shadow:0 4px 10px -4px rgba(154,107,15,.6)}
+
+.dow-row{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;padding:0 10px 5px}
 .dow{
   text-align:center;font-size:9px;font-weight:700;color:var(--muted);
   line-height:1.2;padding-bottom:3px;
@@ -220,10 +234,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 .dow .ne{font-family:'Noto Sans Devanagari';font-size:10.5px;display:block;color:var(--text)}
 .dow.sat .ne, .dow.sat .en{color:var(--sat)}
 
-.grid{
-  display:grid;grid-template-columns:repeat(7,1fr);gap:3px;
-  padding:0 10px 12px;
-}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;padding:0 10px 12px}
 .cell{
   position:relative;min-height:64px;border-radius:10px;
   border:1px solid transparent;background:var(--card-2);
@@ -284,10 +295,9 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   align-items:center;gap:6px;background:var(--card-2);flex-wrap:wrap;line-height:1.5;
 }
 .dot{width:5px;height:5px;border-radius:50%;background:var(--primary);flex:none}
-.dot.blue{background:var(--blue)}
 .dot.gold{background:var(--accent)}
 
-/* ═══════════ NOTES ═══════════ */
+/* NOTES */
 .notes-body{padding:12px 14px 14px}
 .note-chip{
   font-family:'Noto Sans Devanagari';font-size:10.5px;font-weight:700;
@@ -308,8 +318,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   display:inline-flex;align-items:center;gap:5px;
   height:32px;padding:0 12px;border-radius:9px;
   border:1px solid var(--line);background:var(--card-2);color:var(--text);
-  font-size:11.5px;font-weight:600;
-  transition:.15s;
+  font-size:11.5px;font-weight:600;transition:.15s;
 }
 .btn:active{transform:scale(.95)}
 .btn.primary{background:var(--primary);border-color:var(--primary);color:var(--primary-ink)}
@@ -317,7 +326,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 .btn.danger{color:var(--primary);border-color:color-mix(in srgb,var(--primary) 35%,transparent)}
 .btn .i{font-size:12px;line-height:1}
 
-/* ═══════════ PANCHANG ═══════════ */
+/* PANCHANG */
 .panchang{padding:4px 14px 12px}
 .p-row{
   display:flex;justify-content:space-between;align-items:baseline;gap:10px;
@@ -331,7 +340,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 }
 .p-row .v small{display:block;font-family:'Inter';font-weight:400;font-size:9.5px;color:var(--muted);margin-top:1px}
 
-/* ═══════════ NEWS ═══════════ */
+/* NEWS */
 .news-list{padding:4px 8px 10px}
 .news-item{
   display:block;padding:9px 8px;border-radius:10px;
@@ -357,7 +366,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   font-size:9.5px;color:var(--muted);text-align:center;
 }
 
-/* ═══════════ UPCOMING ═══════════ */
+/* UPCOMING */
 .upcoming{padding:4px 8px 10px}
 .up-item{
   display:flex;align-items:center;gap:10px;padding:8px 6px;
@@ -383,7 +392,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 }
 .up-badge.soon{background:var(--primary-soft);color:var(--primary)}
 
-/* ═══════════ CONVERTER ═══════════ */
+/* CONVERTER */
 .conv{padding:12px 14px 14px}
 .conv-row{display:flex;gap:7px;align-items:flex-end;margin-bottom:9px}
 .conv-field{flex:1;min-width:0}
@@ -398,8 +407,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   outline:none;transition:.15s;
 }
 .conv-field input:focus, .conv-field select:focus{
-  border-color:var(--primary);background:var(--card);
-  box-shadow:0 0 0 3px var(--primary-soft);
+  border-color:var(--primary);background:var(--card);box-shadow:0 0 0 3px var(--primary-soft);
 }
 .conv-swap{
   width:32px;height:32px;flex:none;border-radius:50%;
@@ -424,16 +432,13 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   font-weight:400;color:var(--muted);margin-top:2px;line-height:1.4;
 }
 
-/* ═══════════ DAY DETAIL MODAL ═══════════ */
+/* MODAL */
 .modal-backdrop{
   position:fixed;inset:0;z-index:200;
   background:rgba(10,10,15,.55);
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
   display:grid;place-items:end center;
-  opacity:0;pointer-events:none;
-  transition:opacity .22s;
-  padding:0;
+  opacity:0;pointer-events:none;transition:opacity .22s;padding:0;
 }
 .modal-backdrop.open{opacity:1;pointer-events:auto}
 .modal{
@@ -443,8 +448,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   box-shadow:0 -20px 60px -20px rgba(0,0,0,.55);
   transform:translateY(24px);
   transition:transform .3s cubic-bezier(.2,.9,.3,1.05);
-  position:relative;
-  padding-bottom:var(--safe-b);
+  position:relative;padding-bottom:var(--safe-b);
   -webkit-overflow-scrolling:touch;
 }
 .modal-backdrop.open .modal{transform:translateY(0)}
@@ -452,14 +456,13 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   position:absolute;top:12px;right:12px;z-index:2;
   width:32px;height:32px;border-radius:50%;
   background:rgba(255,255,255,.2);color:#fff;
-  display:grid;place-items:center;font-size:17px;
-  transition:.15s;backdrop-filter:blur(4px);
+  display:grid;place-items:center;font-size:17px;transition:.15s;
 }
 .modal-close:active{transform:scale(.9)}
 .modal-hero{
   background:linear-gradient(135deg,#8E0A20 0%,#C8102E 48%,#E03A2F 100%);
-  color:#fff;padding:18px 18px 16px;
-  border-radius:22px 22px 0 0;position:relative;overflow:hidden;
+  color:#fff;padding:18px;border-radius:22px 22px 0 0;
+  position:relative;overflow:hidden;
 }
 .modal-hero[data-mode="ad"]{background:linear-gradient(135deg,#134B7E,#1D6FB8 48%,#2A8AD6)}
 .modal-hero[data-mode="ns"]{background:linear-gradient(135deg,#8A6308,#B8860B 48%,#D9A420)}
@@ -468,22 +471,17 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   font-family:'Noto Sans Devanagari';font-size:12px;font-weight:600;
   opacity:.88;margin-bottom:10px;position:relative;z-index:1;
 }
-.modal-date-grid{
-  display:grid;grid-template-columns:1fr;gap:6px;
-  position:relative;z-index:1;
-}
+.modal-date-grid{display:grid;grid-template-columns:1fr;gap:6px;position:relative;z-index:1}
 .md-cell{
-  background:rgba(255,255,255,.14);
-  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
   border-radius:10px;padding:8px 11px;
   display:flex;justify-content:space-between;align-items:center;gap:10px;
   backdrop-filter:blur(6px);
 }
 .md-cell.active{background:rgba(255,255,255,.27);border-color:rgba(255,255,255,.45)}
 .md-k{
-  font-size:9px;font-weight:700;letter-spacing:.9px;
-  text-transform:uppercase;opacity:.82;
-  display:flex;align-items:center;gap:5px;flex:none;
+  font-size:9px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;
+  opacity:.82;display:flex;align-items:center;gap:5px;flex:none;
 }
 .md-k .k-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.85)}
 .md-v{font-family:'Noto Sans Devanagari';font-size:13px;font-weight:700;text-align:right}
@@ -492,9 +490,8 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 .modal-body{padding:16px 18px 18px}
 .m-section + .m-section{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
 .m-sec-title{
-  font-size:10px;font-weight:700;letter-spacing:1px;
-  text-transform:uppercase;color:var(--muted);
-  margin-bottom:8px;display:flex;align-items:center;gap:6px;
+  font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:6px;
 }
 .m-sec-title::before{content:"";width:3px;height:12px;border-radius:2px;background:var(--primary);flex:none}
 .m-sec-title.blue::before{background:var(--blue)}
@@ -504,8 +501,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 .m-note-empty{
   display:flex;align-items:center;gap:10px;
   padding:11px 12px;border-radius:11px;
-  background:var(--card-2);border:1px dashed var(--line);
-  transition:.15s;
+  background:var(--card-2);border:1px dashed var(--line);transition:.15s;
 }
 .m-note-empty:active{background:var(--primary-soft);border-color:var(--primary);border-style:solid}
 .m-note-empty .plus{
@@ -515,63 +511,41 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 }
 .m-note-empty .lbl{font-family:'Noto Sans Devanagari';font-size:12px;font-weight:600;color:var(--primary)}
 .m-note-empty .sub{font-size:10px;color:var(--muted);margin-top:1px}
-
 .m-note-display{
-  padding:11px 12px;border-radius:11px;
-  background:var(--accent-soft);
+  padding:11px 12px;border-radius:11px;background:var(--accent-soft);
   border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);
 }
-.m-note-text{
-  font-family:'Noto Sans Devanagari';font-size:13px;
-  line-height:1.55;color:var(--text);white-space:pre-wrap;
-}
+.m-note-text{font-family:'Noto Sans Devanagari';font-size:13px;line-height:1.55;color:var(--text);white-space:pre-wrap}
 .m-note-actions{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
 .m-note-actions .btn{height:29px;font-size:10.5px;padding:0 10px}
 
 .m-pan-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-.m-pan-item{
-  padding:8px 10px;border-radius:10px;
-  background:var(--card-2);border:1px solid var(--line);
-}
-.m-pan-item .k{
-  font-size:9px;font-weight:700;letter-spacing:.6px;
-  text-transform:uppercase;color:var(--muted);margin-bottom:2px;
-}
-.m-pan-item .v{
-  font-family:'Noto Sans Devanagari';font-size:12px;font-weight:600;
-  color:var(--text);line-height:1.3;
-}
+.m-pan-item{padding:8px 10px;border-radius:10px;background:var(--card-2);border:1px solid var(--line)}
+.m-pan-item .k{font-size:9px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.m-pan-item .v{font-family:'Noto Sans Devanagari';font-size:12px;font-weight:600;color:var(--text);line-height:1.3}
 .m-pan-item .v small{display:block;font-size:9px;color:var(--muted);font-family:'Inter';font-weight:400;margin-top:1px}
 
 .m-obs{
-  display:flex;align-items:flex-start;gap:10px;
-  padding:11px 12px;border-radius:11px;
-  background:var(--blue-soft);
-  border:1px solid color-mix(in srgb,var(--blue) 25%,transparent);
+  display:flex;align-items:flex-start;gap:10px;padding:11px 12px;border-radius:11px;
+  background:var(--blue-soft);border:1px solid color-mix(in srgb,var(--blue) 25%,transparent);
 }
-.m-obs-ico{
-  width:32px;height:32px;border-radius:9px;flex:none;
-  background:var(--blue);color:#fff;display:grid;place-items:center;font-size:15px;
-}
+.m-obs-ico{width:32px;height:32px;border-radius:9px;flex:none;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:15px}
 .m-obs-body{flex:1;min-width:0}
 .m-obs-title{font-family:'Noto Sans Devanagari';font-size:12.5px;font-weight:700;color:var(--blue);line-height:1.3}
 .m-obs-sub{font-size:10.5px;color:var(--muted);margin-top:2px;line-height:1.4}
 .m-obs-empty{font-size:11px;color:var(--muted);font-style:italic;font-family:'Noto Sans Devanagari'}
 
 .m-fact{
-  padding:12px 13px;border-radius:11px;
-  background:var(--green-soft);
-  border:1px solid color-mix(in srgb,var(--green) 25%,transparent);
-  position:relative;
+  padding:12px 13px;border-radius:11px;background:var(--green-soft);
+  border:1px solid color-mix(in srgb,var(--green) 25%,transparent);position:relative;
 }
 .m-fact::before{
   content:"💡";position:absolute;top:-8px;left:11px;
-  background:var(--card);border-radius:99px;padding:1px 6px;
-  font-size:11px;border:1px solid color-mix(in srgb,var(--green) 25%,transparent);
+  background:var(--card);border-radius:99px;padding:1px 6px;font-size:11px;
+  border:1px solid color-mix(in srgb,var(--green) 25%,transparent);
 }
 .m-fact-text{font-family:'Noto Sans Devanagari';font-size:12px;line-height:1.55;color:var(--text);margin-top:2px}
 
-/* ═══════════ TOAST ═══════════ */
 .toast{
   position:fixed;left:50%;bottom:calc(20px + var(--safe-b));
   transform:translate(-50%,20px);
@@ -589,7 +563,6 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 }
 .note-foot b{color:var(--text);font-weight:600}
 
-/* ═══════════ LARGER SCREENS ═══════════ */
 @media (min-width:640px){
   body{font-size:14.5px}
   .wrap{padding:0 18px;max-width:680px}
@@ -598,15 +571,12 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   .cell{min-height:78px;padding:6px 7px}
   .cell .big{font-size:19px}
   .cell .big.latin{font-size:18px}
-  .cell .ev, .cell .cell-note{font-size:9px}
+  .cell .ev,.cell .cell-note{font-size:9px}
   .modal-date-grid{grid-template-columns:repeat(3,1fr)}
   .md-cell{flex-direction:column;align-items:flex-start;gap:3px}
   .md-v{text-align:left}
   .modal{border-radius:22px;margin:auto 0}
   .modal-backdrop{place-items:center;padding:20px}
-  .modal-hero{border-radius:22px 22px 0 0}
-  .up-date{width:44px;height:46px}
-  .up-date b{font-size:17px}
 }
 </style>
 </head>
@@ -618,7 +588,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
       <div class="logo">स</div>
       <div>
         <div class="brand-ne" id="t-brand">सम्बत</div>
-        <div class="brand-en" id="t-tagline">Three eras · One calendar</div>
+        <div class="brand-en" id="t-tagline">Full Year · BS 2000–2100</div>
       </div>
     </div>
     <div class="bar-actions">
@@ -633,22 +603,19 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 
 <div class="wrap">
 
-  <div class="mode-switch-wrap">
+  <div class="mode-switch-wrap" id="modeWrap" data-mode-wrap="bs">
     <div class="mode-switch" id="modeSwitch">
       <button class="mode-btn" data-mode="ad">
         <span class="m-ne">ई.सं.</span>
-        <span class="m-en">AD</span>
-        <span class="m-month" id="modeMonthAd">October</span>
+        <span class="m-en">AD · English</span>
       </button>
       <button class="mode-btn active" data-mode="bs">
         <span class="m-ne">बि.सं.</span>
-        <span class="m-en">BS</span>
-        <span class="m-month" id="modeMonthBs">असोज</span>
+        <span class="m-en">BS · Bikram</span>
       </button>
       <button class="mode-btn" data-mode="ns">
         <span class="m-ne">ने.सं.</span>
-        <span class="m-en">NS</span>
-        <span class="m-month" id="modeMonthNs">यँला</span>
+        <span class="m-en">NS · Nepal</span>
       </button>
     </div>
   </div>
@@ -658,9 +625,9 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
       <span class="live-dot"></span>
       <span id="t-todayLabel">आज · Today</span>
     </div>
-    <div class="hero-main-value" id="heroMain">असोज २०, २०८३</div>
+    <div class="hero-main-value" id="heroMain">—</div>
     <div class="hero-sub">
-      <span id="heroSub">मङ्गलबार</span>
+      <span id="heroSub">—</span>
       <span class="sep">·</span>
       <span class="hero-time" id="heroTime">--:--:--</span>
     </div>
@@ -670,16 +637,25 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   <div class="card">
     <div class="cal-head">
       <div class="cal-title">
-        <h2 id="monthTitleNe">असोज २०८३</h2>
-        <p id="monthTitleEn">Ashoj 2083</p>
+        <h2 id="monthTitleNe">—</h2>
+        <p id="monthTitleEn">—</p>
       </div>
       <div class="cal-nav">
-        <button class="nav-btn" id="prevBtn" aria-label="Previous">‹</button>
+        <button class="nav-btn" id="prevMonth" aria-label="Previous month">‹</button>
         <button class="nav-btn today" id="todayBtn">आज</button>
-        <button class="nav-btn" id="nextBtn" aria-label="Next">›</button>
+        <button class="nav-btn" id="nextMonth" aria-label="Next month">›</button>
       </div>
     </div>
     <div class="cal-accent" id="calAccent" data-mode="bs"></div>
+
+    <div class="year-nav">
+      <button class="year-btn" id="prevYear" aria-label="Previous year">‹</button>
+      <div class="year-display" id="yearDisplay">—</div>
+      <button class="year-btn" id="nextYear" aria-label="Next year">›</button>
+    </div>
+
+    <div class="month-chips" id="monthChips"></div>
+
     <div class="dow-row" id="dowRow"></div>
     <div class="grid" id="grid"></div>
     <div class="cal-foot">
@@ -691,7 +667,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   <div class="card">
     <div class="card-head">
       <div class="card-title"><span>दिनको टिप्पणी</span> · Notes</div>
-      <div class="note-chip" id="noteDateChip">असोज २०</div>
+      <div class="note-chip" id="noteDateChip">—</div>
     </div>
     <div class="notes-body"><div id="noteBody"></div></div>
   </div>
@@ -699,7 +675,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   <div class="card">
     <div class="card-head">
       <div class="card-title"><span>पञ्चाङ्ग</span> · Panchang</div>
-      <div style="font-size:10.5px;color:var(--muted)" id="panchangDate">असोज २०</div>
+      <div style="font-size:10.5px;color:var(--muted)" id="panchangDate">—</div>
     </div>
     <div class="panchang" id="panchang"></div>
   </div>
@@ -747,7 +723,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
       <div class="conv-row" style="margin-bottom:0">
         <div class="conv-field">
           <label id="t-dayLbl">गते</label>
-          <input type="number" id="convInput" value="20" min="1" max="32" inputmode="numeric">
+          <input type="number" id="convInput" value="1" min="1" max="32" inputmode="numeric">
         </div>
       </div>
       <div class="conv-out">
@@ -758,8 +734,8 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   </div>
 
   <p class="note-foot">
-    <b>Sambat · सम्बत</b> — Demo range: Ashoj 2083 / Oct 2026 / Yanlā 1146.
-    News items are static. Notes save to your device.
+    <b>Sambat · सम्बत</b> — BS supported 2000–2100. Nepal Sambat uses an
+    astronomical approximation; for exact NS dates use a dedicated engine.
   </p>
 </div>
 
@@ -767,7 +743,7 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
   <div class="modal" id="modal">
     <button class="modal-close" id="modalClose" aria-label="Close">×</button>
     <div class="modal-hero" id="modalHero" data-mode="bs">
-      <div class="modal-dow" id="modalDow">मङ्गलबार</div>
+      <div class="modal-dow" id="modalDow">—</div>
       <div class="modal-date-grid" id="modalDates"></div>
     </div>
     <div class="modal-body" id="modalBody"></div>
@@ -777,128 +753,315 @@ button{font-family:inherit;border:0;background:none;cursor:pointer;color:inherit
 <div class="toast" id="toast"></div>
 
 <script>
-const ASHOJ_1 = new Date(2026, 8, 17);
-const OCT_1   = new Date(2026, 9, 1);
-const YANLA_1 = new Date(2026, 8, 12);
-const TODAY   = new Date(2026, 9, 6);
-
-const MONTH = {
-  bsYear: 2083, bsMonthNe:'असोज', bsMonthEn:'Ashoj', bsDays: 31,
-  nsYear: 1146, nsMonthNe:'यँला', nsMonthEn:'Yanlā', nsDays: 30,
-  nsNextMonthNe:'कौला', nsNextMonthEn:'Kaulā'
+/* ═══════════════════════════════════════════════════════
+   BS CALENDAR TABLE (2000 – 2100)
+   12 values per year = days in each BS month starting Baisakh
+   Reference: BS 2000/01/01 = AD 1943-04-14 (Wed)
+   ═══════════════════════════════════════════════════════ */
+const BS_MONTHS = {
+2000:[30,32,31,32,31,30,30,30,29,30,29,31],2001:[31,31,32,31,31,31,30,29,30,29,30,30],
+2002:[31,31,32,32,31,30,30,29,30,29,30,30],2003:[31,32,31,32,31,30,30,30,29,29,30,31],
+2004:[30,32,31,32,31,30,30,30,29,30,29,31],2005:[31,31,32,31,31,31,30,29,30,29,30,30],
+2006:[31,31,32,32,31,30,30,29,30,29,30,30],2007:[31,32,31,32,31,30,30,30,29,29,30,31],
+2008:[31,31,31,32,31,31,30,29,30,29,30,30],2009:[31,31,32,31,31,31,30,29,30,29,30,30],
+2010:[31,31,32,32,31,30,30,29,30,29,30,30],2011:[31,32,31,32,31,30,30,30,29,29,30,31],
+2012:[31,31,31,32,31,31,30,29,30,29,30,30],2013:[31,31,32,31,31,31,30,29,30,29,30,30],
+2014:[31,31,32,32,31,30,30,29,30,29,30,30],2015:[31,32,31,32,31,30,30,30,29,29,30,31],
+2016:[31,31,31,32,31,31,30,29,30,29,30,30],2017:[31,31,32,31,31,31,30,29,30,29,30,30],
+2018:[31,32,31,32,31,30,30,29,30,29,30,30],2019:[31,32,31,32,31,30,30,30,29,30,29,31],
+2020:[31,31,31,32,31,31,30,29,30,29,30,30],2021:[31,31,32,31,31,31,30,29,30,29,30,30],
+2022:[31,32,31,32,31,30,30,30,29,29,30,31],2023:[31,31,31,32,31,31,30,29,30,29,30,30],
+2024:[31,31,32,31,31,31,30,29,30,29,30,30],2025:[31,31,32,32,31,30,30,29,30,29,30,30],
+2026:[31,32,31,32,31,30,30,30,29,29,30,31],2027:[31,31,31,32,31,31,30,29,30,29,30,30],
+2028:[31,31,32,31,31,31,30,29,30,29,30,30],2029:[31,31,32,32,31,30,30,29,30,29,30,30],
+2030:[31,32,31,32,31,30,30,30,29,29,30,31],2031:[31,31,31,32,31,31,30,29,30,29,30,30],
+2032:[31,31,32,31,31,31,30,29,30,29,30,30],2033:[31,31,32,32,31,30,30,29,30,29,30,30],
+2034:[31,32,31,32,31,30,30,30,29,29,30,31],2035:[31,31,31,32,31,31,30,29,30,29,30,30],
+2036:[31,31,32,31,31,31,30,29,30,29,30,30],2037:[31,31,32,32,31,30,30,29,30,29,30,30],
+2038:[31,32,31,32,31,30,30,30,29,29,30,31],2039:[31,31,31,32,31,31,30,29,30,29,30,30],
+2040:[31,31,32,31,31,31,30,29,30,29,30,30],2041:[31,31,32,32,31,30,30,29,30,29,30,30],
+2042:[31,32,31,32,31,30,30,30,29,29,30,31],2043:[31,31,31,32,31,31,30,29,30,29,30,30],
+2044:[31,31,32,31,31,31,30,29,30,29,30,30],2045:[31,31,32,32,31,30,30,29,30,29,30,30],
+2046:[31,32,31,32,31,30,30,30,29,29,30,31],2047:[31,31,31,32,31,31,30,29,30,29,30,30],
+2048:[31,31,32,31,31,31,30,29,30,29,30,30],2049:[31,31,32,32,31,30,30,29,30,29,30,30],
+2050:[31,32,31,32,31,30,30,30,29,29,30,31],2051:[31,31,31,32,31,31,30,29,30,29,30,30],
+2052:[31,31,32,31,31,31,30,29,30,29,30,30],2053:[31,31,32,32,31,30,30,29,30,29,30,30],
+2054:[31,32,31,32,31,30,30,30,29,29,30,31],2055:[31,31,31,32,31,31,30,29,30,29,30,30],
+2056:[31,31,32,31,31,31,30,29,30,29,30,30],2057:[31,31,32,32,31,30,30,29,30,29,30,30],
+2058:[31,32,31,32,31,30,30,30,29,29,30,31],2059:[31,31,31,32,31,31,30,29,30,29,30,30],
+2060:[31,31,32,31,31,31,30,29,30,29,30,30],2061:[31,31,32,32,31,30,30,29,30,29,30,30],
+2062:[31,32,31,32,31,30,30,30,29,29,30,31],2063:[31,31,31,32,31,31,30,29,30,29,30,30],
+2064:[31,31,32,31,31,31,30,29,30,29,30,30],2065:[31,31,32,32,31,30,30,29,30,29,30,30],
+2066:[31,32,31,32,31,30,30,30,29,29,30,31],2067:[31,31,31,32,31,31,30,29,30,29,30,30],
+2068:[31,31,32,31,31,31,30,29,30,29,30,30],2069:[31,31,32,32,31,30,30,29,30,29,30,30],
+2070:[31,32,31,32,31,30,30,30,29,29,30,31],2071:[31,31,31,32,31,31,30,29,30,29,30,30],
+2072:[31,31,32,31,31,31,30,29,30,29,30,30],2073:[31,31,32,32,31,30,30,29,30,29,30,30],
+2074:[31,32,31,32,31,30,30,30,29,29,30,31],2075:[31,31,31,32,31,31,30,29,30,29,30,30],
+2076:[31,31,32,31,31,31,30,29,30,29,30,30],2077:[31,32,31,32,31,30,30,29,30,29,30,30],
+2078:[31,32,31,32,31,30,30,30,29,29,30,31],2079:[31,31,31,32,31,31,30,29,30,29,30,30],
+2080:[31,31,32,31,31,31,30,29,30,29,30,30],2081:[31,31,32,32,31,30,30,29,30,29,30,30],
+2082:[31,32,31,32,31,30,30,30,29,29,30,31],2083:[31,31,31,32,31,31,30,29,30,29,30,30],
+2084:[31,31,32,31,31,31,30,29,30,29,30,30],2085:[31,31,32,32,31,30,30,29,30,29,30,30],
+2086:[31,32,31,32,31,30,30,30,29,29,30,31],2087:[31,31,31,32,31,31,30,29,30,29,30,30],
+2088:[31,31,32,31,31,31,30,29,30,29,30,30],2089:[31,31,32,32,31,30,30,29,30,29,30,30],
+2090:[31,32,31,32,31,30,30,30,29,29,30,31],2091:[31,31,31,32,31,31,30,29,30,29,30,30],
+2092:[31,31,32,31,31,31,30,29,30,29,30,30],2093:[31,31,32,32,31,30,30,29,30,29,30,30],
+2094:[31,32,31,32,31,30,30,30,29,29,30,31],2095:[31,31,31,32,31,31,30,29,30,29,30,30],
+2096:[31,31,32,31,31,31,30,29,30,29,30,30],2097:[31,31,32,32,31,30,30,29,30,29,30,30],
+2098:[31,32,31,32,31,30,30,30,29,29,30,31],2099:[31,31,31,32,31,31,30,29,30,29,30,30],
+2100:[31,31,32,31,31,31,30,29,30,29,30,30]
 };
 
-const EVENTS = {
-  3:  { ne:'संविधान दिवस',        en:'Constitution Day',   type:'holiday' },
-  9:  { ne:'इन्द्रजात्रा',         en:'Indra Jatra',        type:'festival' },
-  11: { ne:'विश्व पर्यटन दिवस',   en:'World Tourism Day',  type:'day' },
-  18: { ne:'जितिया पर्व',          en:'Jitiya Parva',       type:'festival' },
-  22: { ne:'कात्तिक स्नान आरम्भ', en:'Kartik Snan Begins', type:'day' },
-  25: { ne:'घटस्थापना',           en:'Ghatasthapana',      type:'festival' },
-  29: { ne:'फूलपाती',             en:'Fulpati',            type:'festival' },
-  30: { ne:'महा अष्टमी',          en:'Maha Ashtami',       type:'festival' },
-  31: { ne:'महा नवमी',            en:'Maha Navami',        type:'festival' }
-};
+const BS_EPOCH = new Date(1943, 3, 14); // BS 2000/01/01 = AD 1943-04-14
+const BS_MIN_YEAR = 2000;
+const BS_MAX_YEAR = 2100;
 
-const OBSERVANCES = {
-  '09-17': { ne:'विश्व बिरामी सुरक्षा दिवस',   en:'World Patient Safety Day',      ico:'🩺' },
-  '09-18': { ne:'विश्व बाँस दिवस',              en:'World Bamboo Day',              ico:'🎋' },
-  '09-20': { ne:'विश्व सरसफाई दिवस',           en:'World Cleanup Day',             ico:'🧹' },
-  '09-21': { ne:'अन्तर्राष्ट्रिय शान्ति दिवस',   en:'International Day of Peace',    ico:'🕊️' },
-  '09-22': { ne:'विश्व कार-मुक्त दिवस',        en:'World Car-Free Day',            ico:'🚲' },
-  '09-23': { ne:'साङ्केतिक भाषा दिवस',          en:'Int\'l Day of Sign Languages',  ico:'🤟' },
-  '09-25': { ne:'विश्व फार्मासिस्ट दिवस',      en:'World Pharmacists Day',         ico:'💊' },
-  '09-27': { ne:'विश्व पर्यटन दिवस',           en:'World Tourism Day',             ico:'✈️' },
-  '09-28': { ne:'विश्व रेबिज दिवस',             en:'World Rabies Day',              ico:'🐕' },
-  '09-29': { ne:'विश्व हृदय दिवस',              en:'World Heart Day',               ico:'❤️' },
-  '10-01': { ne:'अन्तर्राष्ट्रिय कफी दिवस',      en:'International Coffee Day',      ico:'☕' },
-  '10-02': { ne:'अन्तर्राष्ट्रिय अहिंसा दिवस',   en:'Int\'l Day of Non-Violence',    ico:'🕊️' },
-  '10-04': { ne:'विश्व पशु दिवस',               en:'World Animal Day',              ico:'🐾' },
-  '10-05': { ne:'विश्व शिक्षक दिवस',            en:'World Teachers\' Day',          ico:'📚' },
-  '10-06': { ne:'विश्व सेरेब्रल पाल्सी दिवस',   en:'World Cerebral Palsy Day',      ico:'🧠' },
-  '10-07': { ne:'विश्व वासस्थान दिवस',          en:'World Habitat Day',             ico:'🏠' },
-  '10-09': { ne:'विश्व हुलाक दिवस',             en:'World Post Day',                ico:'✉️' },
-  '10-10': { ne:'विश्व मानसिक स्वास्थ्य दिवस',   en:'World Mental Health Day',       ico:'🧘' },
-  '10-11': { ne:'अन्तर्राष्ट्रिय बालिका दिवस',   en:'Int\'l Day of the Girl Child',  ico:'👧' },
-  '10-13': { ne:'विपद् न्यूनीकरण दिवस',         en:'Int\'l Day for Disaster Reduction', ico:'🌪️' },
-  '10-14': { ne:'विश्व मानक दिवस',              en:'World Standards Day',           ico:'📐' },
-  '10-15': { ne:'विश्व हात धुने दिवस',          en:'Global Handwashing Day',        ico:'🧼' },
-  '10-16': { ne:'विश्व खाद्य दिवस',             en:'World Food Day',                ico:'🌾' },
-  '10-17': { ne:'गरिबी निवारण दिवस',            en:'Int\'l Day for Eradication of Poverty', ico:'🤝' }
-};
+/* ═══════════════════════════════════════════════════════
+   MONTH NAMES
+   ═══════════════════════════════════════════════════════ */
+const BS_NE = ['बैशाख','जेठ','असार','साउन','भदौ','असोज','कार्तिक','मंसिर','पुष','माघ','फाल्गुन','चैत'];
+const BS_EN = ['Baisakh','Jestha','Asar','Shrawan','Bhadra','Ashoj','Kartik','Mangsir','Poush','Magh','Falgun','Chaitra'];
+const BS_SHORT_NE = ['बै','जे','अ','सा','भ','अ','का','मं','पु','मा','फा','चै'];
 
-const FUN_FACTS_BS = {
-  1:'असोज महिना शरद ऋतुको सुरुवात हो — आकाश सफा हुन्छ र हिमाल टाढाबाट पनि देखिन्छ।',
-  2:'नेपालको राष्ट्रीय फूल लालीगुराँस असोजतिर फुल्न थाल्छ, डाँडाभरि रातो रङ छाउँछ।',
-  3:'बि.सं. २०७२ साल असोज ३ गते नेपालको संविधान जारी भएको थियो।',
-  4:'भाद्र–असोजको सन्धिमा दिन र रात बराबर हुन्छन् — यसलाई "शरद सम्पात" भनिन्छ।',
-  5:'नेपालमा सबैभन्दा धेरै पर्वहरू असोज–कार्तिकमा पर्छन्: दशैं, तिहार, छठ।',
-  9:'इन्द्रजात्रा काठमाडौंको सबैभन्दा लामो र रमाइलो सडक महोत्सव मानिन्छ।',
-  11:'विश्व पर्यटन दिवस सेप्टेम्बर २७ मा — नेपालका लागि महत्वपूर्ण क्षेत्र हो।',
-  13:'नेपालको राष्ट्रिय पशु गाई, राष्ट्रिय पक्षी डाँफे — असोजतिर डाँफे हिमालतिर देखिन्छ।',
-  18:'जितिया पर्व मिथिला समुदायका महिलाहरूको सबैभन्दा कठिन व्रत मानिन्छ।',
-  20:'काठमाडौंको औसत उचाइ १४०० मिटर — असोजतिर बिहानको कुहिरो रमाइलो हुन्छ।',
-  25:'घटस्थापनाको दिन दशैं सुरु हुन्छ — नेपालको सबैभन्दा ठूलो चाड।',
-  28:'नेपाली पात्रोमा नवरात्रि ९ रातको पर्व — देवी दुर्गाको आराधना।',
-  30:'महा अष्टमीको दिन देवीको महिषासुरमर्दिनी रूपको पूजा हुन्छ।',
-  31:'महा नवमीपछि विजयादशमी — असत्यमाथि सत्यको विजयको प्रतीक।'
-};
+const NS_NE = ['कछला','थिंला','पोहेला','सिल्ला','चिल्ला','चौला','बछला','तछला','दिल्ला','गुंला','यंला','कौला'];
+const NS_EN = ['Kachhalā','Thinlā','Pohelā','Sillā','Chillā','Choulā','Bachhalā','Tachhalā','Dillā','Gunlā','Yanlā','Kaulā'];
+const NS_SHORT_NE = ['क','थि','पो','सि','चि','चौ','ब','त','दि','गु','यं','कौ'];
 
-const NEWS = [
-  { tag:'राजनीति', title:'संसदमा बजेट अधिवेशन सुरु, प्रमुख दलहरूले जनताका सवाल उठाए', src:'कान्तिपुर', time:'२ घण्टा' },
-  { tag:'अर्थ',    title:'राष्ट्र बैंकले मौद्रिक नीतिको त्रैमासिक समीक्षा सार्वजनिक गर्ने तयारी', src:'नयाँ पत्रिका', time:'४ घण्टा' },
-  { tag:'खेलकुद', title:'साफ च्याम्पियनसिपका लागि नेपाली टोलीको तयारी तीव्र, अभ्यास खेल घोषणा', src:'हिमालयन टाइम्स', time:'६ घण्टा' },
-  { tag:'समाज',   title:'काठमाडौंमा वायु प्रदूषण बढ्दो, स्वास्थ्य सतर्कता अपनाउन आग्रह', src:'अनलाइनखबर', time:'८ घण्टा' }
-];
-
-const MS_DAY = 86400000;
-const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
-const daysBetween = (a, b) => Math.round((a - b) / MS_DAY);
-const sameDay = (a, b) => a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
-const toNe = n => String(n).replace(/\d/g, d => NE_DIGITS[d]);
-const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const AD_NE = ['जनवरी','फेब्रुअरी','मार्च','अप्रिल','मे','जुन','जुलाई','अगस्ट','सेप्टेम्बर','अक्टोबर','नोभेम्बर','डिसेम्बर'];
+const AD_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const AD_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 const WEEKDAYS = [
   { ne:'आइत',  en:'Sun' }, { ne:'सोम',   en:'Mon' }, { ne:'मङ्गल', en:'Tue' },
   { ne:'बुध',   en:'Wed' }, { ne:'बिहि',  en:'Thu' }, { ne:'शुक्र', en:'Fri' },
   { ne:'शनि',   en:'Sat' }
 ];
-const AD_MONTHS_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-const AD_MONTHS_NE = ['जनवरी','फेब्रुअरी','मार्च','अप्रिल','मे','जुन','जुलाई','अगस्ट','सेप्टेम्बर','अक्टोबर','नोभेम्बर','डिसेम्बर'];
 const DOW_EN = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 const DOW_NE = ['आइतबार','सोमबार','मङ्गलबार','बुधबार','बिहीबार','शुक्रबार','शनिबार'];
 const NE_DIGITS = ['०','१','२','३','४','५','६','७','८','९'];
+const toNe = n => String(n).replace(/\d/g, d => NE_DIGITS[d]);
 
+/* Panchang constants */
 const TITHI = ['प्रतिपदा','द्वितीया','तृतीया','चतुर्थी','पञ्चमी','षष्ठी','सप्तमी','अष्टमी','नवमी','दशमी','एकादशी','द्वादशी','त्रयोदशी','चतुर्दशी','पूर्णिमा'];
 const NAKSHATRA = ['अश्विनी','भरणी','कृत्तिका','रोहिणी','मृगशिरा','आर्द्रा','पुनर्वसु','पुष्य','अश्लेषा','मघा','पूर्वाफाल्गुनी','उत्तराफाल्गुनी','हस्त','चित्रा','स्वाति','विशाखा','अनुराधा','ज्येष्ठा','मूल','पूर्वाषाढा','उत्तराषाढा','श्रवण','धनिष्ठा','शतभिषा','पूर्वाभाद्रपद','उत्तराभाद्रपद','रेवती'];
 const YOGA = ['विष्कम्भ','प्रीति','आयुष्मान','सौभाग्य','शोभन','अतिगण्ड','सुकर्मा','धृति','शूल','गण्ड','वृद्धि','ध्रुव','व्याघात','हर्षण','वज्र','सिद्धि','व्यतिपात','वरीयान','परिघ','शिव','सिद्ध','साध्य','शुभ','शुक्ल','ब्रह्म','इन्द्र','वैधृति'];
 const KARANA = ['बव','बालव','कौलव','तैतिल','गर','वणिज','विष्टि'];
 const RITU = ['वसन्त','ग्रीष्म','वर्षा','शरद','हेमन्त','शिशिर'];
 
-function dateToBs(d){
-  const off = daysBetween(d, ASHOJ_1);
-  const day = off + 1;
-  if (day < 1 || day > MONTH.bsDays) return null;
-  return { year: MONTH.bsYear, month: 6, monthNe: MONTH.bsMonthNe, monthEn: MONTH.bsMonthEn, day };
+/* Annual observances (fixed by AD MM-DD) */
+const OBSERVANCES = {
+  '01-01':{ne:'नयाँ वर्ष',en:'New Year\'s Day',ico:'🎉'},
+  '01-04':{ne:'विश्व ब्रेल दिवस',en:'World Braille Day',ico:'⠿'},
+  '01-26':{ne:'गणतन्त्र दिवस (भारत)',en:'Republic Day (India)',ico:'🇮🇳'},
+  '02-04':{ne:'विश्व क्यान्सर दिवस',en:'World Cancer Day',ico:'🎗️'},
+  '02-14':{ne:'प्रेम दिवस',en:'Valentine\'s Day',ico:'❤️'},
+  '03-08':{ne:'अन्तर्राष्ट्रिय महिला दिवस',en:'Int\'l Women\'s Day',ico:'♀️'},
+  '03-20':{ne:'विश्व खुशी दिवस',en:'Int\'l Day of Happiness',ico:'😊'},
+  '03-22':{ne:'विश्व जल दिवस',en:'World Water Day',ico:'💧'},
+  '03-24':{ne:'विश्व क्षयरोग दिवस',en:'World TB Day',ico:'🫁'},
+  '04-07':{ne:'विश्व स्वास्थ्य दिवस',en:'World Health Day',ico:'🏥'},
+  '04-22':{ne:'पृथ्वी दिवस',en:'Earth Day',ico:'🌍'},
+  '05-01':{ne:'अन्तर्राष्ट्रिय श्रमिक दिवस',en:'Labour Day',ico:'⚒️'},
+  '05-03':{ne:'विश्व प्रेस स्वतन्त्रता दिवस',en:'World Press Freedom Day',ico:'📰'},
+  '05-12':{ne:'अन्तर्राष्ट्रिय नर्स दिवस',en:'Int\'l Nurses Day',ico:'👩‍⚕️'},
+  '05-17':{ne:'विश्व दूरसञ्चार दिवस',en:'World Telecommunication Day',ico:'📡'},
+  '05-31':{ne:'विश्व धुम्रपानमुक्त दिवस',en:'World No Tobacco Day',ico:'🚭'},
+  '06-05':{ne:'विश्व वातावरण दिवस',en:'World Environment Day',ico:'🌱'},
+  '06-08':{ne:'विश्व महासागर दिवस',en:'World Oceans Day',ico:'🌊'},
+  '06-21':{ne:'अन्तर्राष्ट्रिय योग दिवस',en:'Int\'l Yoga Day',ico:'🧘'},
+  '07-01':{ne:'अन्तर्राष्ट्रिय सहकारी दिवस',en:'Int\'l Coops Day',ico:'🤝'},
+  '07-11':{ne:'विश्व जनसंख्या दिवस',en:'World Population Day',ico:'👥'},
+  '07-18':{ne:'नेल्सन मण्डेला दिवस',en:'Nelson Mandela Day',ico:'✊'},
+  '07-30':{ne:'विश्व मित्रता दिवस',en:'Int\'l Friendship Day',ico:'🤗'},
+  '08-09':{ne:'विश्व आदिवासी दिवस',en:'World Indigenous Day',ico:'🏞️'},
+  '08-12':{ne:'अन्तर्राष्ट्रिय युवा दिवस',en:'Int\'l Youth Day',ico:'🧑'},
+  '08-19':{ne:'विश्व फोटोग्राफी दिवस',en:'World Photography Day',ico:'📷'},
+  '09-05':{ne:'शिक्षक दिवस (भारत)',en:'Teachers\' Day (India)',ico:'📚'},
+  '09-08':{ne:'अन्तर्राष्ट्रिय साक्षरता दिवस',en:'Int\'l Literacy Day',ico:'📖'},
+  '09-15':{ne:'अन्तर्राष्ट्रिय लोकतन्त्र दिवस',en:'Int\'l Democracy Day',ico:'🗳️'},
+  '09-17':{ne:'विश्व बिरामी सुरक्षा दिवस',en:'World Patient Safety Day',ico:'🩺'},
+  '09-21':{ne:'अन्तर्राष्ट्रिय शान्ति दिवस',en:'Int\'l Day of Peace',ico:'🕊️'},
+  '09-22':{ne:'विश्व कार-मुक्त दिवस',en:'World Car-Free Day',ico:'🚲'},
+  '09-27':{ne:'विश्व पर्यटन दिवस',en:'World Tourism Day',ico:'✈️'},
+  '09-29':{ne:'विश्व हृदय दिवस',en:'World Heart Day',ico:'❤️'},
+  '10-01':{ne:'अन्तर्राष्ट्रिय कफी दिवस',en:'Int\'l Coffee Day',ico:'☕'},
+  '10-02':{ne:'अन्तर्राष्ट्रिय अहिंसा दिवस',en:'Int\'l Non-Violence Day',ico:'🕊️'},
+  '10-04':{ne:'विश्व पशु दिवस',en:'World Animal Day',ico:'🐾'},
+  '10-05':{ne:'विश्व शिक्षक दिवस',en:'World Teachers\' Day',ico:'📚'},
+  '10-06':{ne:'विश्व सेरेब्रल पाल्सी दिवस',en:'World Cerebral Palsy Day',ico:'🧠'},
+  '10-09':{ne:'विश्व हुलाक दिवस',en:'World Post Day',ico:'✉️'},
+  '10-10':{ne:'विश्व मानसिक स्वास्थ्य दिवस',en:'World Mental Health Day',ico:'🧘'},
+  '10-11':{ne:'अन्तर्राष्ट्रिय बालिका दिवस',en:'Int\'l Day of the Girl Child',ico:'👧'},
+  '10-14':{ne:'विश्व मानक दिवस',en:'World Standards Day',ico:'📐'},
+  '10-15':{ne:'विश्व हात धुने दिवस',en:'Global Handwashing Day',ico:'🧼'},
+  '10-16':{ne:'विश्व खाद्य दिवस',en:'World Food Day',ico:'🌾'},
+  '10-17':{ne:'गरिबी निवारण दिवस',en:'Int\'l Day for Eradication of Poverty',ico:'🤝'},
+  '10-24':{ne:'संयुक्त राष्ट्रसंघ दिवस',en:'United Nations Day',ico:'🇺🇳'},
+  '11-14':{ne:'विश्व मधुमेह दिवस',en:'World Diabetes Day',ico:'💉'},
+  '11-19':{ne:'विश्व शौचालय दिवस',en:'World Toilet Day',ico:'🚻'},
+  '11-20':{ne:'बालबालिका दिवस',en:'Universal Children\'s Day',ico:'🧒'},
+  '12-01':{ne:'विश्व एड्स दिवस',en:'World AIDS Day',ico:'🎗️'},
+  '12-03':{ne:'अपाङ्गता दिवस',en:'Int\'l Day of Persons with Disabilities',ico:'♿'},
+  '12-10':{ne:'मानव अधिकार दिवस',en:'Human Rights Day',ico:'✊'},
+  '12-25':{ne:'क्रिसमस',en:'Christmas',ico:'🎄'}
+};
+
+/* Fixed BS-date national holidays (recurring every year) */
+const BS_FIXED = {
+  0: { 0:{ne:'नयाँ वर्ष',en:'Nepali New Year'} },                  // Baisakh 1
+  1: { 14:{ne:'गणतन्त्र दिवस',en:'Republic Day'} },                // Jestha 15
+  5: { 2:{ne:'संविधान दिवस',en:'Constitution Day'} },             // Ashoj 3
+  10:{ 6:{ne:'प्रजातन्त्र दिवस',en:'Democracy Day'} }             // Falgun 7
+};
+
+/* Demo Nepali festival overlay for Ashoj 2083 only */
+const DEMO_FEST_2083 = {
+  9:{ne:'इन्द्रजात्रा',en:'Indra Jatra',type:'festival'},
+  18:{ne:'जितिया पर्व',en:'Jitiya Parva',type:'festival'},
+  25:{ne:'घटस्थापना',en:'Ghatasthapana',type:'festival'},
+  29:{ne:'फूलपाती',en:'Fulpati',type:'festival'},
+  30:{ne:'महा अष्टमी',en:'Maha Ashtami',type:'festival'},
+  31:{ne:'महा नवमी',en:'Maha Navami',type:'festival'}
+};
+
+/* Fun facts rotating by BS day */
+const FUN_FACTS = [
+  'असोज महिना शरद ऋतुको सुरुवात हो — आकाश सफा हुन्छ र हिमाल टाढाबाट पनि देखिन्छ।',
+  'नेपालको राष्ट्रीय फूल लालीगुराँस बसन्ततिर फुल्न थाल्छ, डाँडाभरि रातो रङ छाउँछ।',
+  'बि.सं. २०७२ साल असोज ३ गते नेपालको संविधान जारी भएको थियो।',
+  'भाद्र–असोजको सन्धिमा दिन र रात बराबर हुन्छन् — यसलाई "शरद सम्पात" भनिन्छ।',
+  'नेपालमा सबैभन्दा धेरै पर्वहरू असोज–कार्तिकमा पर्छन्: दशैं, तिहार, छठ।',
+  'काठमाडौं उपत्यकामा औसत तापक्रम वर्षभरि १०–३०°C को बीचमा रहन्छ।',
+  'नेपाली पात्रोमा बैशाख महिनाबाट नयाँ वर्ष सुरु हुन्छ — विक्रम सम्बत अनुसार।',
+  'काठमाडौंको औसत उचाइ १४०० मिटर — बिहानको कुहिरो रमाइलो हुन्छ।',
+  'नेपालको राष्ट्रिय पशु गाई, राष्ट्रिय पक्षी डाँफे — हिमालतिर देखिन्छ।',
+  'नेपाली पात्रोमा नवरात्रि ९ रातको पर्व — देवी दुर्गाको आराधना।',
+  'नेपाल सम्बत नेवार समुदायको पात्रो — काठमाडौं उपत्यकाबाट सुरु भएको।',
+  'नेपालको सबैभन्दा लामो नदी कर्णाली — सुदूर पश्चिमबाट बग्छ।',
+  'नेपाली भाषामा "असोज" शब्द संस्कृत "आश्विन" बाट अपभ्रंश भएको हो।',
+  'दशैंमा नेपालभर करिब १ लाख बाख्रा र बोका बलि चढाइन्छ (अनुमानित)।',
+  'नेपालको कुल गार्हस्थ्य उत्पादनमा कृषिको योगदान करिब २४% छ।'
+];
+
+const NEWS = [
+  { tag:'राजनीति', title:'संसदमा बजेट अधिवेशन सुरु, प्रमुख दलहरूले जनताका सवाल उठाए', src:'कान्तिपुर', time:'२ घण्टा' },
+  { tag:'अर्थ', title:'राष्ट्र बैंकले मौद्रिक नीतिको त्रैमासिक समीक्षा सार्वजनिक गर्ने तयारी', src:'नयाँ पत्रिका', time:'४ घण्टा' },
+  { tag:'खेलकुद', title:'साफ च्याम्पियनसिपका लागि नेपाली टोलीको तयारी तीव्र', src:'हिमालयन टाइम्स', time:'६ घण्टा' },
+  { tag:'समाज', title:'काठमाडौंमा वायु प्रदूषण बढ्दो, स्वास्थ्य सतर्कता अपनाउन आग्रह', src:'अनलाइनखबर', time:'८ घण्टा' }
+];
+
+/* ═══════════════════════════════════════════════════════
+   HELPERS
+   ═══════════════════════════════════════════════════════ */
+const MS_DAY = 86400000;
+const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+const daysBetween = (a, b) => Math.round((a - b) / MS_DAY);
+const sameDay = (a, b) => a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad2 = n => String(n).padStart(2, '0');
+const dateKey = d => `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+const adMmDd = d => `${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+
+/* ═══════════════════════════════════════════════════════
+   CONVERSIONS
+   ═══════════════════════════════════════════════════════ */
+function daysInBsYear(y){ return BS_MONTHS[y].reduce((s, d) => s + d, 0); }
+
+function bsToAd(by, bm, bd){
+  if (!BS_MONTHS[by] || bm < 0 || bm > 11 || bd < 1 || bd > BS_MONTHS[by][bm]) return null;
+  let days = 0;
+  for (let y = BS_MIN_YEAR; y < by; y++) days += daysInBsYear(y);
+  for (let m = 0; m < bm; m++) days += BS_MONTHS[by][m];
+  days += bd - 1;
+  return addDays(BS_EPOCH, days);
 }
-function dateToNs(d){
-  const yOff = daysBetween(d, YANLA_1);
-  if (yOff >= 0 && yOff < MONTH.nsDays) return { year: MONTH.nsYear, month: 1, monthNe: MONTH.nsMonthNe, monthEn: MONTH.nsMonthEn, day: yOff + 1 };
-  const kStart = addDays(YANLA_1, MONTH.nsDays);
-  const kOff = daysBetween(d, kStart);
-  if (kOff >= 0 && kOff < 30) return { year: MONTH.nsYear, month: 2, monthNe: MONTH.nsNextMonthNe, monthEn: MONTH.nsNextMonthEn, day: kOff + 1 };
+
+function adToBs(date){
+  let days = daysBetween(date, BS_EPOCH);
+  if (days < 0) return null;
+  let y = BS_MIN_YEAR;
+  while (y <= BS_MAX_YEAR){
+    const yd = daysInBsYear(y);
+    if (days < yd) break;
+    days -= yd; y++;
+  }
+  if (y > BS_MAX_YEAR) return null;
+  let m = 0;
+  while (m < 11 && days >= BS_MONTHS[y][m]){ days -= BS_MONTHS[y][m]; m++; }
+  return { year: y, month: m, day: days + 1 };
+}
+
+/* NS: approximate. Anchor NS new year at Oct 22 of the Gregorian year
+   when NS number increments. NS months approximate at 29/30 days. */
+const NS_MONTH_LEN = [30, 29, 30, 29, 30, 29, 30, 30, 29, 30, 29, 30]; // 355
+const NS_ANCHOR_MONTH = 9;  // October
+const NS_ANCHOR_DAY = 22;
+
+function nsStartAd(nsYear){
+  // NS year Y started on Oct 22 of (Y + 879)
+  return new Date(nsYear + 879, NS_ANCHOR_MONTH, NS_ANCHOR_DAY);
+}
+
+function adToNs(date){
+  // Find NS year: NS year increments after Oct 22 of that Gregorian year
+  const y = date.getFullYear();
+  const cutoff = new Date(y, NS_ANCHOR_MONTH, NS_ANCHOR_DAY);
+  let nsYear;
+  if (date >= cutoff) nsYear = y - 879;
+  else nsYear = y - 880;
+  const start = nsStartAd(nsYear);
+  let days = daysBetween(date, start);
+  // Handle day before NS new year anchor edge case
+  if (days < 0){ nsYear -= 1; days += 355; }
+  let m = 0, cum = 0;
+  while (m < 11 && days >= cum + NS_MONTH_LEN[m]){ cum += NS_MONTH_LEN[m]; m++; }
+  return { year: nsYear, month: m, day: days - cum + 1 };
+}
+
+function nsToAd(ny, nm, nd){
+  const start = nsStartAd(ny);
+  let days = 0;
+  for (let i = 0; i < nm; i++) days += NS_MONTH_LEN[i];
+  days += nd - 1;
+  return addDays(start, days);
+}
+
+/* Get AD date for first day of a given mode-month */
+function firstAdOfMonth(mode, year, month){
+  if (mode === 'ad') return new Date(year, month, 1);
+  if (mode === 'bs') return bsToAd(year, month, 1);
+  if (mode === 'ns') return nsToAd(year, month, 1);
   return null;
 }
-function dateToAd(d){ return { year: d.getFullYear(), month: d.getMonth() + 1, day: d.getDate() }; }
-function dateKey(d){ return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
-function adMmDd(d){ return `${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+
+/* Get day count for mode-month */
+function daysInModeMonth(mode, year, month){
+  if (mode === 'ad') return new Date(year, month + 1, 0).getDate();
+  if (mode === 'bs') return BS_MONTHS[year] ? BS_MONTHS[year][month] : 0;
+  if (mode === 'ns') return NS_MONTH_LEN[month];
+  return 0;
+}
+
+/* Get month/year range labels for mode */
+function modeRange(mode, year, month){
+  const start = firstAdOfMonth(mode, year, month);
+  if (!start) return '';
+  const n = daysInModeMonth(mode, year, month);
+  const end = addDays(start, n - 1);
+  const fmt = d => `${AD_SHORT[d.getMonth()]} ${d.getDate()}`;
+  return `${fmt(start)} – ${fmt(end)}, ${end.getFullYear()}`;
+}
+
+/* ═══════════════════════════════════════════════════════
+   PANCHANG (approximate)
+   ═══════════════════════════════════════════════════════ */
 function panchangFor(date){
-  const bs = dateToBs(date);
-  const n = bs ? bs.day : (daysBetween(date, ASHOJ_1) + 32);
+  const bs = adToBs(date);
+  const n = bs ? bs.day + (bs.month * 30) : Math.abs(daysBetween(date, BS_EPOCH)) % 365;
   const tIdx = ((n + 14) % 30 + 30) % 30;
   const sunrise = 5 * 60 + 54 + (n % 15);
   const sunset = 17 * 60 + 48 - (n % 15);
-  const fmt = m => `${String(Math.floor(m / 60)).padStart(2,'0')}:${String(m % 60).padStart(2,'0')}`;
+  const fmt = m => `${pad2(Math.floor(m / 60))}:${pad2(m % 60)}`;
   return {
     paksha: tIdx < 15 ? 'शुक्ल' : 'कृष्ण',
     tithi: TITHI[tIdx % 15],
@@ -909,22 +1072,46 @@ function panchangFor(date){
     sunrise: fmt(sunrise), sunset: fmt(sunset)
   };
 }
+
 function getObservance(d){ return OBSERVANCES[adMmDd(d)] || null; }
-function getFunFact(d){
-  const bs = dateToBs(d);
-  if (bs && FUN_FACTS_BS[bs.day]) return FUN_FACTS_BS[bs.day];
-  const fallback = Object.values(FUN_FACTS_BS);
-  const idx = Math.abs(daysBetween(d, ASHOJ_1)) % fallback.length;
-  return fallback[idx];
+
+function getBsFixed(date){
+  const bs = adToBs(date);
+  if (!bs) return null;
+  const m = BS_FIXED[bs.month];
+  return m ? m[bs.day - 1] || null : null;
 }
 
-const NOTES_KEY = 'sambat_notes_v4';
+function getFestival(date){
+  const bs = adToBs(date);
+  if (bs && bs.year === 2083 && bs.month === 5 && DEMO_FEST_2083[bs.day]) {
+    return DEMO_FEST_2083[bs.day];
+  }
+  return null;
+}
+
+function getFunFact(date){
+  const n = Math.abs(daysBetween(date, BS_EPOCH));
+  return FUN_FACTS[n % FUN_FACTS.length];
+}
+
+/* ═══════════════════════════════════════════════════════
+   NOTES PERSISTENCE
+   ═══════════════════════════════════════════════════════ */
+const NOTES_KEY = 'sambat_notes_v5';
 function loadNotes(){ try { return JSON.parse(localStorage.getItem(NOTES_KEY)) || {}; } catch(e){ return {}; } }
 function persistNotes(){ try { localStorage.setItem(NOTES_KEY, JSON.stringify(state.notes)); } catch(e){} }
 
+/* ═══════════════════════════════════════════════════════
+   STATE
+   ═══════════════════════════════════════════════════════ */
+const TODAY = new Date();
+
 const state = {
-  mode: 'bs',
-  today: new Date(TODAY),
+  mode: 'bs',                          // 'bs' | 'ad' | 'ns'
+  viewBsYear: 0, viewBsMonth: 0,
+  viewAdYear: 0, viewAdMonth: 0,
+  viewNsYear: 0, viewNsMonth: 0,
   selected: new Date(TODAY),
   notes: loadNotes(),
   lang: 'ne',
@@ -932,14 +1119,26 @@ const state = {
   editingNote: false
 };
 
+function initViewFromDate(date){
+  const bs = adToBs(date);
+  if (bs){ state.viewBsYear = bs.year; state.viewBsMonth = bs.month; }
+  state.viewAdYear = date.getFullYear();
+  state.viewAdMonth = date.getMonth();
+  const ns = adToNs(date);
+  if (ns){ state.viewNsYear = ns.year; state.viewNsMonth = ns.month; }
+}
+
+initViewFromDate(TODAY);
+
+/* ═══════════════════════════════════════════════════════
+   i18n
+   ═══════════════════════════════════════════════════════ */
 const I18N = {
   ne: {
-    brand:'सम्बत', tagline:'तीन सम्बत · एक पात्रो',
+    brand:'सम्बत', tagline:'पूर्ण वर्ष · बि.सं. २०००–२१००',
     todayLabel:'आज · Today',
     foot1:'पर्व / बिदा', foot2:'टिप्पणी',
-    panchang:'पञ्चाङ्ग',
-    notes:'दिनको टिप्पणी',
-    news:'आजको समाचार',
+    panchang:'पञ्चाङ्ग', notes:'दिनको टिप्पणी', news:'आजको समाचार',
     from:'From', to:'To', result:'Result', dayLbl:'गते',
     save:'सुरक्षित', clear:'मेट्ने', edit:'सम्पादन', cancel:'रद्द',
     addNote:'टिप्पणी थप्नुहोस्', addNoteSub:'यो दिनको लागि केही लेख्नुहोस्…',
@@ -949,19 +1148,15 @@ const I18N = {
     adFull:'ई.सं. / AD', bsFull:'बि.सं. / BS', nsFull:'ने.सं. / NS',
     observance:'विशेष दिवस', funFact:'रोचक तथ्य',
     daysLeft:'दिन बाँकी', today:'आज', tomorrow:'भोलि',
-    noteSaved:'टिप्पणी सुरक्षित भयो',
-    noteCleared:'टिप्पणी मेटियो',
-    onlyDemo:'डेमो: असोज २०८३ मात्र लोड छ',
-    invalidDay:'सही गते हाल्नुहोस्',
-    noObservance:'यो दिन कुनै अन्तर्राष्ट्रिय दिवस पर्दैन।'
+    noteSaved:'टिप्पणी सुरक्षित भयो', noteCleared:'टिप्पणी मेटियो',
+    invalidDay:'सही गते हाल्नुहोस्', noObservance:'यो दिन कुनै विशेष दिवस पर्दैन।',
+    outOfRange:'समर्थित दायरा: बि.सं. २०००–२१००'
   },
   en: {
-    brand:'Sambat', tagline:'Three eras · One calendar',
+    brand:'Sambat', tagline:'Full Year · BS 2000–2100',
     todayLabel:'Today',
     foot1:'Festival / Holiday', foot2:'Note',
-    panchang:'Panchang',
-    notes:'Notes for the day',
-    news:'Today\'s News',
+    panchang:'Panchang', notes:'Notes for the day', news:'Today\'s News',
     from:'From', to:'To', result:'Result', dayLbl:'Day',
     save:'Save', clear:'Clear', edit:'Edit', cancel:'Cancel',
     addNote:'Add a note', addNoteSub:'Write something for this day…',
@@ -971,63 +1166,53 @@ const I18N = {
     adFull:'English / AD', bsFull:'Bikram / BS', nsFull:'Nepal / NS',
     observance:'Observance', funFact:'Fun fact',
     daysLeft:'days left', today:'Today', tomorrow:'Tomorrow',
-    noteSaved:'Note saved',
-    noteCleared:'Note cleared',
-    onlyDemo:'Demo: only Ashoj 2083 loaded',
-    invalidDay:'Enter a valid day',
-    noObservance:'No international observance on this day.'
+    noteSaved:'Note saved', noteCleared:'Note cleared',
+    invalidDay:'Enter a valid day', noObservance:'No observance on this day.',
+    outOfRange:'Supported range: BS 2000–2100'
   }
 };
 const t = k => I18N[state.lang][k] || k;
 
-function modeMeta(mode){
-  if (mode === 'ad'){
-    return { titleNe: 'October 2026', titleEn: `October 2026 · ${AD_MONTHS_NE[9]} २०२६`, firstDate: OCT_1, days: 31 };
-  }
-  if (mode === 'ns'){
-    const last = addDays(YANLA_1, MONTH.nsDays - 1);
-    return { titleNe: `${MONTH.nsMonthNe} ${toNe(MONTH.nsYear)}`, titleEn: `${MONTH.nsMonthEn} ${MONTH.nsYear}`, firstDate: YANLA_1, days: MONTH.nsDays, last };
-  }
-  const last = addDays(ASHOJ_1, MONTH.bsDays - 1);
-  return { titleNe: `${MONTH.bsMonthNe} ${toNe(MONTH.bsYear)}`, titleEn: `${MONTH.bsMonthEn} ${MONTH.bsYear}`, firstDate: ASHOJ_1, days: MONTH.bsDays, last };
-}
-
+/* ═══════════════════════════════════════════════════════
+   LIVE CLOCK
+   ═══════════════════════════════════════════════════════ */
 function tickClock(){
   const now = new Date();
-  const hh = String(now.getHours()).padStart(2,'0');
-  const mm = String(now.getMinutes()).padStart(2,'0');
-  const ss = String(now.getSeconds()).padStart(2,'0');
-  const str = `${hh}:${mm}:${ss}`;
+  const str = `${pad2(now.getHours())}:${pad2(now.getMinutes())}:${pad2(now.getSeconds())}`;
   const el = document.getElementById('heroTime');
   if (el) el.textContent = state.lang === 'ne' ? toNe(str) : str;
 }
 setInterval(tickClock, 1000);
 
+/* ═══════════════════════════════════════════════════════
+   RENDER — HERO
+   ═══════════════════════════════════════════════════════ */
 function renderHero(){
-  const d = state.today;
-  const bs = dateToBs(d), ns = dateToNs(d), ad = dateToAd(d);
+  const d = state.selected;
+  const bs = adToBs(d), ns = adToNs(d);
   const p = panchangFor(d);
   const mode = state.mode;
+
   document.getElementById('hero').setAttribute('data-mode', mode);
 
   const mainEl = document.getElementById('heroMain');
   if (mode === 'bs' && bs){
-    mainEl.textContent = `${bs.monthNe} ${toNe(bs.day)}, ${toNe(bs.year)}`;
+    mainEl.textContent = `${BS_NE[bs.month]} ${toNe(bs.day)}, ${toNe(bs.year)}`;
     mainEl.classList.remove('latin');
   } else if (mode === 'ad'){
-    mainEl.textContent = `${AD_MONTHS_EN[ad.month-1]} ${ad.day}, ${ad.year}`;
+    mainEl.textContent = `${AD_EN[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
     mainEl.classList.add('latin');
-  } else if (mode === 'ns' && ns){
-    mainEl.textContent = `${ns.monthNe} ${toNe(ns.day)}, ${toNe(ns.year)}`;
+  } else if (ns){
+    mainEl.textContent = `${NS_NE[ns.month]} ${toNe(ns.day)}, ${toNe(ns.year)}`;
     mainEl.classList.remove('latin');
   }
 
   document.getElementById('heroSub').textContent = state.lang === 'ne' ? DOW_NE[d.getDay()] : DOW_EN[d.getDay()];
 
   const pills = [];
-  if (mode !== 'bs' && bs) pills.push({ k:t('bsFull'), v:`${bs.monthNe} ${toNe(bs.day)}, ${toNe(bs.year)}` });
-  if (mode !== 'ad') pills.push({ k:t('adFull'), v:`${AD_MONTHS_EN[ad.month-1]} ${ad.day}, ${ad.year}` });
-  if (mode !== 'ns' && ns) pills.push({ k:t('nsFull'), v:`${ns.monthNe} ${toNe(ns.day)}, ${toNe(ns.year)}` });
+  if (mode !== 'bs' && bs) pills.push({ k:t('bsFull'), v:`${BS_NE[bs.month]} ${toNe(bs.day)}, ${toNe(bs.year)}` });
+  if (mode !== 'ad') pills.push({ k:t('adFull'), v:`${AD_EN[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}` });
+  if (mode !== 'ns' && ns) pills.push({ k:t('nsFull'), v:`${NS_NE[ns.month]} ${toNe(ns.day)}, ${toNe(ns.year)}` });
   pills.push({ k:t('tithi'), v:`${p.paksha} ${p.tithi}` });
 
   document.getElementById('heroPills').innerHTML = pills.slice(0,3).map(p =>
@@ -1037,78 +1222,159 @@ function renderHero(){
   tickClock();
 }
 
+/* ═══════════════════════════════════════════════════════
+   RENDER — CALENDAR
+   ═══════════════════════════════════════════════════════ */
+function currentView(){
+  const mode = state.mode;
+  if (mode === 'bs') return { year: state.viewBsYear, month: state.viewBsMonth };
+  if (mode === 'ad') return { year: state.viewAdYear, month: state.viewAdMonth };
+  return { year: state.viewNsYear, month: state.viewNsMonth };
+}
+
 function renderCalendar(){
   const mode = state.mode;
-  const meta = modeMeta(mode);
+  const { year, month } = currentView();
 
-  const titleEl = document.getElementById('monthTitleNe');
-  titleEl.textContent = meta.titleNe;
-  titleEl.classList.toggle('latin', mode === 'ad');
-  document.getElementById('monthTitleEn').textContent = meta.titleEn;
-  document.getElementById('calAccent').setAttribute('data-mode', mode);
+  // Header
+  const titleNeEl = document.getElementById('monthTitleNe');
+  const titleEnEl = document.getElementById('monthTitleEn');
+  const yearDisplay = document.getElementById('yearDisplay');
+  const accent = document.getElementById('calAccent');
+  accent.setAttribute('data-mode', mode);
 
-  document.getElementById('dowRow').innerHTML = WEEKDAYS.map((w,i)=>`
-    <div class="dow ${i===6?'sat':''}">
+  if (mode === 'bs'){
+    titleNeEl.textContent = `${BS_NE[month]} ${toNe(year)}`;
+    titleNeEl.classList.remove('latin');
+    titleEnEl.textContent = `${BS_EN[month]} ${year} · ${modeRange('bs', year, month)}`;
+    yearDisplay.textContent = toNe(year);
+    yearDisplay.classList.remove('latin');
+  } else if (mode === 'ad'){
+    titleNeEl.textContent = `${AD_EN[month]} ${year}`;
+    titleNeEl.classList.add('latin');
+    titleEnEl.textContent = `${AD_NE[month]} ${toNe(year)}`;
+    yearDisplay.textContent = year;
+    yearDisplay.classList.add('latin');
+  } else {
+    titleNeEl.textContent = `${NS_NE[month]} ${toNe(year)}`;
+    titleNeEl.classList.remove('latin');
+    titleEnEl.textContent = `${NS_EN[month]} ${year} · ${modeRange('ns', year, month)}`;
+    yearDisplay.textContent = toNe(year);
+    yearDisplay.classList.remove('latin');
+  }
+
+  // Disable year buttons at range ends
+  const prevYearBtn = document.getElementById('prevYear');
+  const nextYearBtn = document.getElementById('nextYear');
+  if (mode === 'bs'){
+    prevYearBtn.disabled = year <= BS_MIN_YEAR;
+    nextYearBtn.disabled = year >= BS_MAX_YEAR;
+  } else if (mode === 'ad'){
+    prevYearBtn.disabled = false;
+    nextYearBtn.disabled = false;
+  } else {
+    prevYearBtn.disabled = false;
+    nextYearBtn.disabled = false;
+  }
+
+  // Month chips
+  const chips = document.getElementById('monthChips');
+  const names = mode === 'ad' ? AD_SHORT : mode === 'bs' ? BS_SHORT_NE : NS_SHORT_NE;
+  chips.innerHTML = names.map((n, i) => `
+    <button class="month-chip ${i === month ? 'active':''} ${mode === 'ad' ? 'latin':''}"
+            data-month="${i}">${n}</button>`).join('');
+  chips.querySelectorAll('.month-chip').forEach(el => {
+    el.addEventListener('click', () => {
+      setViewMonth(+el.dataset.month);
+    });
+  });
+
+  // Weekday row
+  document.getElementById('dowRow').innerHTML = WEEKDAYS.map((w, i) => `
+    <div class="dow ${i === 6 ? 'sat':''}">
       <span class="ne">${w.ne}</span><span class="en">${w.en}</span>
     </div>`).join('');
 
-  const startDow = meta.firstDate.getDay();
+  // Build grid
+  const firstAd = firstAdOfMonth(mode, year, month);
+  const nDays = daysInModeMonth(mode, year, month);
+
   let html = '';
-  for (let i = 0; i < startDow; i++) html += '<div class="cell empty"></div>';
+  if (!firstAd || nDays === 0){
+    html = '<div style="grid-column:1/-1;text-align:center;padding:20px;color:var(--muted);font-size:12px">Out of range</div>';
+  } else {
+    const startDow = firstAd.getDay();
+    for (let i = 0; i < startDow; i++) html += '<div class="cell empty"></div>';
 
-  for (let i = 0; i < meta.days; i++){
-    const date = addDays(meta.firstDate, i);
-    const bs = dateToBs(date), ns = dateToNs(date), ad = dateToAd(date);
-    const ev = bs ? EVENTS[bs.day] : null;
-    const sat = date.getDay() === 6;
-    const isToday = sameDay(date, state.today);
-    const isSel = sameDay(date, state.selected);
-    const note = state.notes[dateKey(date)] || '';
+    for (let i = 0; i < nDays; i++){
+      const date = addDays(firstAd, i);
+      const bs = adToBs(date), ns = adToNs(date);
+      const fest = getFestival(date);
+      const fixed = getBsFixed(date);
+      const obs = getObservance(date);
+      const sat = date.getDay() === 6;
+      const isToday = sameDay(date, TODAY);
+      const isSel = sameDay(date, state.selected);
+      const note = state.notes[dateKey(date)] || '';
 
-    const cls = ['cell', sat ? 'sat':'', isToday ? 'today':'', (isSel && !isToday) ? 'selected':''].filter(Boolean).join(' ');
+      const cls = ['cell', sat ? 'sat':'', isToday ? 'today':'', (isSel && !isToday) ? 'selected':'']
+        .filter(Boolean).join(' ');
 
-    let big, bigLatin = false;
-    if (mode === 'bs' && bs){ big = toNe(bs.day); }
-    else if (mode === 'ad'){ big = String(ad.day); bigLatin = true; }
-    else if (mode === 'ns' && ns){ big = toNe(ns.day); }
-    else { big = '·'; }
+      // Big number + secondary numbers based on mode
+      let big, bigLatin = false;
+      let topLeft = '', badge = '';
 
-    let topLeft = '', badge = '';
-    if (mode === 'bs'){
-      topLeft = `<span class="sec-num">${ad.day}</span>`;
-      if (ns) badge = `<span class="ns-badge">${toNe(ns.day)}</span>`;
-    } else if (mode === 'ad'){
-      topLeft = bs ? `<span class="sec-num ne">${toNe(bs.day)}</span>` : '';
-      if (ns) badge = `<span class="ns-badge">${toNe(ns.day)}</span>`;
-    } else {
-      topLeft = `<span class="sec-num">${ad.day}</span>`;
-      if (bs) badge = `<span class="bs-badge">${toNe(bs.day)}</span>`;
+      if (mode === 'bs'){
+        big = bs ? toNe(bs.day) : toNe(i + 1);
+        topLeft = `<span class="sec-num">${date.getDate()}</span>`;
+        if (ns) badge = `<span class="ns-badge">${toNe(ns.day)}</span>`;
+      } else if (mode === 'ad'){
+        big = String(date.getDate());
+        bigLatin = true;
+        topLeft = bs ? `<span class="sec-num ne">${toNe(bs.day)}</span>` : '';
+        if (ns) badge = `<span class="ns-badge">${toNe(ns.day)}</span>`;
+      } else { // ns
+        big = ns ? toNe(ns.day) : '·';
+        topLeft = `<span class="sec-num">${date.getDate()}</span>`;
+        if (bs) badge = `<span class="bs-badge">${toNe(bs.day)}</span>`;
+      }
+
+      // Event label priority: festival > fixed holiday > observance
+      let evHtml = '';
+      if (fest){
+        evHtml = `<span class="ev ${fest.type === 'day' ? 'day':''}">${state.lang === 'ne' ? fest.ne : fest.en}</span>`;
+      } else if (fixed){
+        evHtml = `<span class="ev">${state.lang === 'ne' ? fixed.ne : fixed.en}</span>`;
+      } else if (obs){
+        evHtml = `<span class="ev day">${obs.ico} ${state.lang === 'ne' ? obs.ne : obs.en}</span>`;
+      }
+
+      const noteHtml = note ? `<span class="cell-note">${esc(note)}</span>` : '';
+
+      const title = [
+        bs ? `${BS_EN[bs.month]} ${bs.day}, ${bs.year} BS` : '',
+        `${AD_EN[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`,
+        ns ? `${NS_EN[ns.month]} ${ns.day}, ${ns.year} NS` : '',
+        fest ? (state.lang === 'ne' ? fest.ne : fest.en) : '',
+        fixed ? (state.lang === 'ne' ? fixed.ne : fixed.en) : '',
+        obs ? (state.lang === 'ne' ? obs.ne : obs.en) : '',
+        note
+      ].filter(Boolean).join(' · ');
+
+      html += `
+        <div class="${cls}" data-date="${dateKey(date)}" role="button" tabindex="0" title="${esc(title)}">
+          <div class="top">${topLeft}<span class="pills">${badge}</span></div>
+          <span class="big${bigLatin ? ' latin':''}">${big}</span>
+          <div class="bottom">${evHtml}${noteHtml}</div>
+        </div>`;
     }
-
-    const evHtml = ev ? `<span class="ev ${ev.type === 'day' ? 'day':''}">${state.lang === 'ne' ? ev.ne : ev.en}</span>` : '';
-    const noteHtml = note ? `<span class="cell-note">${esc(note)}</span>` : '';
-
-    const title = [
-      bs ? `${bs.monthEn} ${bs.day}, ${bs.year} BS` : '',
-      `${AD_MONTHS_EN[ad.month-1]} ${ad.day}, ${ad.year}`,
-      ns ? `${ns.monthEn} ${ns.day}, ${ns.year} NS` : '',
-      ev ? (state.lang === 'ne' ? ev.ne : ev.en) : '',
-      note
-    ].filter(Boolean).join(' · ');
-
-    html += `
-      <div class="${cls}" data-date="${dateKey(date)}" role="button" tabindex="0" title="${esc(title)}">
-        <div class="top">${topLeft}<span class="pills">${badge}</span></div>
-        <span class="big${bigLatin ? ' latin':''}">${big}</span>
-        <div class="bottom">${evHtml}${noteHtml}</div>
-      </div>`;
   }
   document.getElementById('grid').innerHTML = html;
 
-  document.querySelectorAll('.cell[data-date]').forEach(el=>{
-    el.addEventListener('click', ()=>{
-      const [y,m,d] = el.dataset.date.split('-').map(Number);
-      const date = new Date(y, m-1, d);
+  document.querySelectorAll('.cell[data-date]').forEach(el => {
+    el.addEventListener('click', () => {
+      const [y, m, d] = el.dataset.date.split('-').map(Number);
+      const date = new Date(y, m - 1, d);
       selectDate(date);
       openDayModal(date);
     });
@@ -1118,10 +1384,78 @@ function renderCalendar(){
   document.getElementById('t-foot2').textContent = t('foot2');
 }
 
+/* ═══════════════════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════════════════ */
+function setViewMonth(month){
+  if (state.mode === 'bs') state.viewBsMonth = month;
+  else if (state.mode === 'ad') state.viewAdMonth = month;
+  else state.viewNsMonth = month;
+  renderCalendar();
+}
+
+function prevMonth(){
+  const mode = state.mode;
+  if (mode === 'bs'){
+    if (state.viewBsMonth === 0){
+      if (state.viewBsYear <= BS_MIN_YEAR) return;
+      state.viewBsYear--;
+      state.viewBsMonth = 11;
+    } else state.viewBsMonth--;
+  } else if (mode === 'ad'){
+    if (state.viewAdMonth === 0){ state.viewAdYear--; state.viewAdMonth = 11; }
+    else state.viewAdMonth--;
+  } else {
+    if (state.viewNsMonth === 0){ state.viewNsYear--; state.viewNsMonth = 11; }
+    else state.viewNsMonth--;
+  }
+  renderCalendar();
+}
+
+function nextMonth(){
+  const mode = state.mode;
+  if (mode === 'bs'){
+    if (state.viewBsMonth === 11){
+      if (state.viewBsYear >= BS_MAX_YEAR) return;
+      state.viewBsYear++;
+      state.viewBsMonth = 0;
+    } else state.viewBsMonth++;
+  } else if (mode === 'ad'){
+    if (state.viewAdMonth === 11){ state.viewAdYear++; state.viewAdMonth = 0; }
+    else state.viewAdMonth++;
+  } else {
+    if (state.viewNsMonth === 11){ state.viewNsYear++; state.viewNsMonth = 0; }
+    else state.viewNsMonth++;
+  }
+  renderCalendar();
+}
+
+function prevYear(){
+  if (state.mode === 'bs'){
+    if (state.viewBsYear <= BS_MIN_YEAR) return;
+    state.viewBsYear--;
+  } else if (state.mode === 'ad'){ state.viewAdYear--; }
+  else { state.viewNsYear--; }
+  renderCalendar();
+}
+
+function nextYear(){
+  if (state.mode === 'bs'){
+    if (state.viewBsYear >= BS_MAX_YEAR) return;
+    state.viewBsYear++;
+  } else if (state.mode === 'ad'){ state.viewAdYear++; }
+  else { state.viewNsYear++; }
+  renderCalendar();
+}
+
+/* ═══════════════════════════════════════════════════════
+   RENDER — NOTES
+   ═══════════════════════════════════════════════════════ */
 function renderNotes(){
   const d = state.selected;
-  const bs = dateToBs(d), ns = dateToNs(d);
-  const chip = bs ? `${bs.monthNe} ${toNe(bs.day)}` : (ns ? `${ns.monthNe} ${toNe(ns.day)}` : `${d.getDate()}`);
+  const bs = adToBs(d), ns = adToNs(d);
+  const chip = bs ? `${BS_NE[bs.month]} ${toNe(bs.day)}`
+                  : (ns ? `${NS_NE[ns.month]} ${toNe(ns.day)}` : `${d.getDate()}`);
   document.getElementById('noteDateChip').textContent = chip;
 
   const key = dateKey(d);
@@ -1137,8 +1471,8 @@ function renderNotes(){
         <button class="btn" id="noteEditBtn"><span class="i">✎</span> ${t('edit')}</button>
         <button class="btn danger ghost" id="noteClearBtn"><span class="i">✕</span> ${t('clear')}</button>
       </div>`;
-    document.getElementById('noteEditBtn').onclick = ()=>{ state.editingNote = true; renderNotes(); };
-    document.getElementById('noteClearBtn').onclick = ()=>{
+    document.getElementById('noteEditBtn').onclick = () => { state.editingNote = true; renderNotes(); };
+    document.getElementById('noteClearBtn').onclick = () => {
       delete state.notes[key]; persistNotes();
       renderCalendar(); renderNotes();
       toast(t('noteCleared'));
@@ -1151,7 +1485,7 @@ function renderNotes(){
         ${note ? `<button class="btn ghost" id="noteCancelBtn">${t('cancel')}</button>` : ''}
       </div>`;
     const input = document.getElementById('noteInput');
-    document.getElementById('noteSaveBtn').onclick = ()=>{
+    document.getElementById('noteSaveBtn').onclick = () => {
       const v = input.value;
       if (v.trim()) state.notes[key] = v;
       else delete state.notes[key];
@@ -1160,15 +1494,19 @@ function renderNotes(){
       toast(t('noteSaved'));
     };
     const cancel = document.getElementById('noteCancelBtn');
-    if (cancel) cancel.onclick = ()=>{ state.editingNote = false; renderNotes(); };
+    if (cancel) cancel.onclick = () => { state.editingNote = false; renderNotes(); };
   }
 }
 
+/* ═══════════════════════════════════════════════════════
+   RENDER — PANCHANG
+   ═══════════════════════════════════════════════════════ */
 function renderPanchang(){
   const d = state.selected;
-  const bs = dateToBs(d), ns = dateToNs(d);
+  const bs = adToBs(d), ns = adToNs(d);
   const p = panchangFor(d);
-  const chip = bs ? `${bs.monthNe} ${toNe(bs.day)}` : (ns ? `${ns.monthNe} ${toNe(ns.day)}` : `${d.getDate()}`);
+  const chip = bs ? `${BS_NE[bs.month]} ${toNe(bs.day)}`
+                  : (ns ? `${NS_NE[ns.month]} ${toNe(ns.day)}` : `${d.getDate()}`);
   document.getElementById('panchangDate').textContent = chip;
 
   const rows = [
@@ -1180,10 +1518,13 @@ function renderPanchang(){
     [t('sunrise'), p.sunrise, 'Kathmandu'],
     [t('sunset'), p.sunset, 'Kathmandu']
   ];
-  document.getElementById('panchang').innerHTML = rows.map(([k,v,sub])=>`
+  document.getElementById('panchang').innerHTML = rows.map(([k,v,sub]) => `
     <div class="p-row"><span class="k">${k}</span><span class="v">${v}<small>${sub}</small></span></div>`).join('');
 }
 
+/* ═══════════════════════════════════════════════════════
+   RENDER — NEWS
+   ═══════════════════════════════════════════════════════ */
 function renderNews(){
   document.getElementById('newsList').innerHTML = NEWS.map(n => `
     <a class="news-item" href="#" onclick="event.preventDefault();toast('Demo');">
@@ -1194,41 +1535,61 @@ function renderNews(){
   document.getElementById('newsFoot').textContent = state.lang === 'ne' ? 'डेमो फिड' : 'Demo feed';
 }
 
+/* ═══════════════════════════════════════════════════════
+   RENDER — UPCOMING (next 5 events from today)
+   ═══════════════════════════════════════════════════════ */
 function renderUpcoming(){
-  const items = Object.entries(EVENTS)
-    .map(([day,e]) => ({ day:+day, date: addDays(ASHOJ_1, +day - 1), ...e }))
-    .filter(e => e.date >= state.today || sameDay(e.date, state.today))
-    .sort((a,b) => a.date - b.date)
-    .slice(0, 5);
+  const events = [];
+  // Scan next 120 days for events
+  for (let i = 0; i < 120; i++){
+    const d = addDays(TODAY, i);
+    const fest = getFestival(d);
+    const fixed = getBsFixed(d);
+    const obs = getObservance(d);
+    const e = fest || fixed || obs;
+    if (e){
+      events.push({ date: d, ...e });
+      if (events.length >= 5) break;
+    }
+  }
 
   const wrap = document.getElementById('upcoming');
-  if (!items.length){
-    wrap.innerHTML = `<div style="padding:14px;text-align:center;font-size:11px;color:var(--muted)">${state.lang==='ne'?'कुनै पर्व बाँकी छैन।':'No upcoming events.'}</div>`;
+  if (!events.length){
+    wrap.innerHTML = `<div style="padding:14px;text-align:center;font-size:11px;color:var(--muted)">${state.lang==='ne'?'कुनै पर्व भेटिएन।':'No upcoming events found.'}</div>`;
     return;
   }
-  wrap.innerHTML = items.map(e=>{
-    const days = daysBetween(e.date, state.today);
+
+  wrap.innerHTML = events.map(e => {
+    const days = daysBetween(e.date, TODAY);
     const label = days === 0 ? t('today') : days === 1 ? t('tomorrow') : `${toNe(days)} ${t('daysLeft')}`;
+    const bs = adToBs(e.date);
     return `
       <div class="up-item" data-date="${dateKey(e.date)}">
-        <div class="up-date"><b>${toNe(e.day)}</b><i>${AD_MONTHS_EN[e.date.getMonth()].slice(0,3)} ${e.date.getDate()}</i></div>
+        <div class="up-date">
+          <b>${bs ? toNe(bs.day) : e.date.getDate()}</b>
+          <i>${AD_SHORT[e.date.getMonth()]} ${e.date.getDate()}</i>
+        </div>
         <div class="up-info">
-          <div class="up-name">${state.lang === 'ne' ? e.ne : e.en}</div>
-          <div class="up-meta">${MONTH.bsMonthEn} ${e.day}, ${MONTH.bsYear} BS</div>
+          <div class="up-name">${e.ico ? e.ico + ' ' : ''}${state.lang === 'ne' ? e.ne : e.en}</div>
+          <div class="up-meta">${bs ? BS_EN[bs.month] + ' ' + bs.day + ', ' + bs.year + ' BS' : ''}</div>
         </div>
         <span class="up-badge ${days <= 2 ? 'soon':''}">${label}</span>
       </div>`;
   }).join('');
 
-  wrap.querySelectorAll('.up-item').forEach(el=>{
-    el.addEventListener('click', ()=>{
-      const [y,m,d] = el.dataset.date.split('-').map(Number);
-      const date = new Date(y, m-1, d);
-      selectDate(date); openDayModal(date);
+  wrap.querySelectorAll('.up-item').forEach(el => {
+    el.addEventListener('click', () => {
+      const [y, m, d] = el.dataset.date.split('-').map(Number);
+      const date = new Date(y, m - 1, d);
+      selectDate(date);
+      openDayModal(date);
     });
   });
 }
 
+/* ═══════════════════════════════════════════════════════
+   RENDER — CONVERTER
+   ═══════════════════════════════════════════════════════ */
 function renderConverter(){
   const from = document.getElementById('convFrom').value;
   const val = parseInt(document.getElementById('convInput').value, 10);
@@ -1239,31 +1600,53 @@ function renderConverter(){
   document.getElementById('t-result').textContent = t('result');
   document.getElementById('t-dayLbl').textContent = t('dayLbl');
 
-  if (isNaN(val) || val < 1 || val > 32){ out.innerHTML = `—<small>${t('invalidDay')}</small>`; return; }
-
-  let target = null;
-  if (from === 'bs'){
-    if (val > MONTH.bsDays){ out.innerHTML = '—<small>Ashoj 2083: 31 days</small>'; return; }
-    target = addDays(ASHOJ_1, val - 1);
-  } else if (from === 'ad'){
-    if (val > 31){ out.innerHTML = '—<small>October 2026: 31 days</small>'; return; }
-    target = new Date(2026, 9, val);
-  } else {
-    if (val > MONTH.nsDays){ out.innerHTML = '—<small>Yanlā 1146: 30 days</small>'; return; }
-    target = addDays(YANLA_1, val - 1);
+  if (isNaN(val) || val < 1 || val > 32){
+    out.innerHTML = `—<small>${t('invalidDay')}</small>`; return;
   }
 
-  const bs = dateToBs(target), ns = dateToNs(target), ad = dateToAd(target);
-  const mainLine = `${AD_MONTHS_EN[ad.month-1]} ${ad.day}, ${ad.year}`;
-  const subParts = [];
-  if (bs) subParts.push(`${bs.monthNe} ${toNe(bs.day)}, ${toNe(bs.year)} BS`);
-  if (ns) subParts.push(`${ns.monthNe} ${toNe(ns.day)}, ${toNe(ns.year)} NS`);
-  out.innerHTML = `${mainLine}<small>${subParts.join(' · ')}</small>`;
+  let target = null;
+  let lbl = '';
+
+  if (from === 'bs'){
+    // Use currently viewed BS year/month
+    const by = state.viewBsYear, bm = state.viewBsMonth;
+    const dim = BS_MONTHS[by] ? BS_MONTHS[by][bm] : 0;
+    if (val > dim){ out.innerHTML = `—<small>BS ${by}/${bm+1} has ${dim} days</small>`; return; }
+    target = bsToAd(by, bm, val);
+    lbl = `${BS_NE[bm]} ${val}, ${by} BS`;
+  } else if (from === 'ad'){
+    const ay = state.viewAdYear, am = state.viewAdMonth;
+    const dim = new Date(ay, am + 1, 0).getDate();
+    if (val > dim){ out.innerHTML = `—<small>${AD_EN[am]} ${ay} has ${dim} days</small>`; return; }
+    target = new Date(ay, am, val);
+    lbl = `${AD_EN[am]} ${val}, ${ay}`;
+  } else {
+    const ny = state.viewNsYear, nm = state.viewNsMonth;
+    const dim = NS_MONTH_LEN[nm];
+    if (val > dim){ out.innerHTML = `—<small>NS month has ${dim} days</small>`; return; }
+    target = nsToAd(ny, nm, val);
+    lbl = `${NS_EN[nm]} ${val}, ${ny} NS`;
+  }
+
+  if (!target){ out.innerHTML = '—<small>Invalid</small>'; return; }
+
+  const bs = adToBs(target), ns = adToNs(target);
+  const mainLine = `${AD_EN[target.getMonth()]} ${target.getDate()}, ${target.getFullYear()}`;
+  const sub = [];
+  if (bs) sub.push(`${BS_NE[bs.month]} ${toNe(bs.day)}, ${toNe(bs.year)} BS`);
+  if (ns) sub.push(`${NS_NE[ns.month]} ${toNe(ns.day)}, ${toNe(ns.year)} NS`);
+  sub.push(DOW_EN[target.getDay()]);
+  out.innerHTML = `${mainLine}<small>${sub.join(' · ')}</small>`;
 }
 
+/* ═══════════════════════════════════════════════════════
+   DAY DETAIL MODAL
+   ═══════════════════════════════════════════════════════ */
 function openDayModal(date){
-  const bs = dateToBs(date), ns = dateToNs(date), ad = dateToAd(date);
+  const bs = adToBs(date), ns = adToNs(date);
   const p = panchangFor(date);
+  const fest = getFestival(date);
+  const fixed = getBsFixed(date);
   const obs = getObservance(date);
   const fact = getFunFact(date);
   const key = dateKey(date);
@@ -1273,9 +1656,9 @@ function openDayModal(date){
   document.getElementById('modalDow').textContent = state.lang === 'ne' ? DOW_NE[date.getDay()] : DOW_EN[date.getDay()];
 
   const dateCells = [
-    { k: 'BS', v: bs ? `${bs.monthNe} ${toNe(bs.day)}, ${toNe(bs.year)}` : '—', active: state.mode === 'bs', latin: false, dot: 'var(--primary)' },
-    { k: 'AD', v: `${AD_MONTHS_EN[ad.month-1]} ${ad.day}, ${ad.year}`, active: state.mode === 'ad', latin: true, dot: 'var(--blue)' },
-    { k: 'NS', v: ns ? `${ns.monthNe} ${toNe(ns.day)}, ${toNe(ns.year)}` : '—', active: state.mode === 'ns', latin: false, dot: 'var(--accent)' }
+    { k: 'BS', v: bs ? `${BS_NE[bs.month]} ${toNe(bs.day)}, ${toNe(bs.year)}` : '—', active: state.mode === 'bs', latin: false, dot: 'var(--primary)' },
+    { k: 'AD', v: `${AD_EN[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`, active: state.mode === 'ad', latin: true, dot: 'var(--blue)' },
+    { k: 'NS', v: ns ? `${NS_NE[ns.month]} ${toNe(ns.day)}, ${toNe(ns.year)}` : '—', active: state.mode === 'ns', latin: false, dot: 'var(--accent)' }
   ];
   document.getElementById('modalDates').innerHTML = dateCells.map(c => `
     <div class="md-cell ${c.active ? 'active':''}">
@@ -1309,14 +1692,20 @@ function openDayModal(date){
       <div class="m-pan-item"><div class="k">☀ / ☾</div><div class="v">${p.sunrise} – ${p.sunset}<small>Kathmandu</small></div></div>
     </div>`;
 
-  const obsBlock = obs
-    ? `<div class="m-obs">
-         <div class="m-obs-ico">${obs.ico}</div>
-         <div class="m-obs-body">
-           <div class="m-obs-title">${state.lang === 'ne' ? obs.ne : obs.en}</div>
-           <div class="m-obs-sub">${state.lang === 'ne' ? obs.en : obs.ne}</div>
-         </div>
-       </div>`
+  const allObs = [];
+  if (fest) allObs.push({ ico: '🎊', title: state.lang === 'ne' ? fest.ne : fest.en, sub: state.lang === 'ne' ? fest.en : fest.ne });
+  if (fixed && !fest) allObs.push({ ico: '🇳🇵', title: state.lang === 'ne' ? fixed.ne : fixed.en, sub: state.lang === 'ne' ? fixed.en : fixed.ne });
+  if (obs) allObs.push({ ico: obs.ico, title: state.lang === 'ne' ? obs.ne : obs.en, sub: state.lang === 'ne' ? obs.en : obs.ne });
+
+  const obsBlock = allObs.length
+    ? allObs.map(o => `
+      <div class="m-obs" style="margin-bottom:7px">
+        <div class="m-obs-ico">${o.ico}</div>
+        <div class="m-obs-body">
+          <div class="m-obs-title">${esc(o.title)}</div>
+          <div class="m-obs-sub">${esc(o.sub)}</div>
+        </div>
+      </div>`).join('')
     : `<div class="m-obs-empty">${t('noObservance')}</div>`;
 
   const factBlock = `<div class="m-fact"><div class="m-fact-text">${esc(fact)}</div></div>`;
@@ -1367,8 +1756,8 @@ function switchModalNoteToEdit(date, existing){
       <button class="btn ghost" id="mNoteCancel">${t('cancel')}</button>
     </div>`;
   const inp = document.getElementById('mNoteInput');
-  setTimeout(()=> inp.focus(), 80);
-  document.getElementById('mNoteSave').onclick = ()=>{
+  setTimeout(() => inp.focus(), 80);
+  document.getElementById('mNoteSave').onclick = () => {
     const v = inp.value;
     if (v.trim()) state.notes[key] = v;
     else delete state.notes[key];
@@ -1377,7 +1766,7 @@ function switchModalNoteToEdit(date, existing){
     openDayModal(date);
     toast(t('noteSaved'));
   };
-  document.getElementById('mNoteCancel').onclick = ()=> openDayModal(date);
+  document.getElementById('mNoteCancel').onclick = () => openDayModal(date);
 }
 
 function closeDayModal(){
@@ -1385,89 +1774,120 @@ function closeDayModal(){
   document.body.style.overflow = '';
 }
 
+/* ═══════════════════════════════════════════════════════
+   UTIL / ACTIONS
+   ═══════════════════════════════════════════════════════ */
 const toastEl = document.getElementById('toast');
 let toastTimer;
 function toast(msg){
   toastEl.textContent = msg;
   toastEl.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(()=> toastEl.classList.remove('show'), 2200);
+  toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2000);
 }
 
 function selectDate(d){
   state.selected = new Date(d);
   state.editingNote = false;
-  renderCalendar();
-  renderPanchang();
+  renderHero();
   renderNotes();
+  renderPanchang();
+  // If date is outside current view month, jump view to it
+  const mode = state.mode;
+  const view = currentView();
+  const firstAd = firstAdOfMonth(mode, view.year, view.month);
+  const nDays = daysInModeMonth(mode, view.year, view.month);
+  if (firstAd && nDays){
+    const endAd = addDays(firstAd, nDays - 1);
+    if (d < firstAd || d > endAd){
+      initViewFromDate(d);
+      renderCalendar();
+    } else {
+      renderCalendar();
+    }
+  } else {
+    renderCalendar();
+  }
 }
 
 function renderAll(){
   renderHero();
   renderCalendar();
-  renderPanchang();
   renderNotes();
+  renderPanchang();
   renderNews();
   renderUpcoming();
   renderConverter();
 }
 
-document.getElementById('modeSwitch').addEventListener('click', e=>{
+/* ═══════════════════════════════════════════════════════
+   EVENT WIRING
+   ═══════════════════════════════════════════════════════ */
+document.getElementById('modeSwitch').addEventListener('click', e => {
   const btn = e.target.closest('.mode-btn');
   if (!btn) return;
   const mode = btn.dataset.mode;
   if (mode === state.mode) return;
   state.mode = mode;
   document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
+  document.getElementById('modeWrap').setAttribute('data-mode-wrap', mode);
   document.getElementById('hero').setAttribute('data-mode', mode);
+  // Re-anchor view to currently selected date
+  initViewFromDate(state.selected);
   renderAll();
 });
 
+document.getElementById('prevMonth').addEventListener('click', prevMonth);
+document.getElementById('nextMonth').addEventListener('click', nextMonth);
+document.getElementById('prevYear').addEventListener('click', prevYear);
+document.getElementById('nextYear').addEventListener('click', nextYear);
+
+document.getElementById('todayBtn').addEventListener('click', () => {
+  selectDate(TODAY);
+  initViewFromDate(TODAY);
+  renderAll();
+  toast(state.lang === 'ne' ? 'आज' : 'Today');
+});
+
 document.getElementById('modalClose').addEventListener('click', closeDayModal);
-document.getElementById('modalBackdrop').addEventListener('click', e=>{
+document.getElementById('modalBackdrop').addEventListener('click', e => {
   if (e.target === e.currentTarget) closeDayModal();
 });
-document.addEventListener('keydown', e=>{
+document.addEventListener('keydown', e => {
   if (e.key === 'Escape'){
-    const open = document.getElementById('modalBackdrop').classList.contains('open');
-    if (open) closeDayModal();
+    if (document.getElementById('modalBackdrop').classList.contains('open')) closeDayModal();
   }
 });
 
+/* Converter */
 document.getElementById('convInput').addEventListener('input', renderConverter);
-document.getElementById('convFrom').addEventListener('change', e=>{
+document.getElementById('convFrom').addEventListener('change', e => {
   const f = e.target.value;
   const to = document.getElementById('convTo');
   const order = ['bs','ad','ns'];
   to.value = order.find(x => x !== f) || 'ad';
   const input = document.getElementById('convInput');
-  if (f === 'bs') input.value = 20;
-  else if (f === 'ad') input.value = 6;
-  else input.value = 25;
+  input.value = 1;
   renderConverter();
 });
-document.getElementById('convSwap').addEventListener('click', ()=>{
+document.getElementById('convSwap').addEventListener('click', () => {
   const f = document.getElementById('convFrom'), to = document.getElementById('convTo');
   [f.value, to.value] = [to.value, f.value];
   renderConverter();
 });
 
-document.getElementById('prevBtn').addEventListener('click', ()=> toast(t('onlyDemo')));
-document.getElementById('nextBtn').addEventListener('click', ()=> toast(t('onlyDemo')));
-document.getElementById('todayBtn').addEventListener('click', ()=>{
-  selectDate(state.today);
-  toast(state.lang === 'ne' ? 'आज' : 'Today');
-});
-
-document.getElementById('themeBtn').addEventListener('click', ()=>{
+/* Theme */
+document.getElementById('themeBtn').addEventListener('click', () => {
   state.theme = state.theme === 'light' ? 'dark' : 'light';
   document.documentElement.dataset.theme = state.theme;
   document.getElementById('themeBtn').textContent = state.theme === 'light' ? '🌙' : '☀️';
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', state.theme === 'light' ? '#C8102E' : '#0F1115');
 });
 
-document.querySelectorAll('#langSeg button').forEach(b=>{
-  b.addEventListener('click', ()=>{
-    document.querySelectorAll('#langSeg button').forEach(x=>x.classList.remove('active'));
+/* Language */
+document.querySelectorAll('#langSeg button').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('#langSeg button').forEach(x => x.classList.remove('active'));
     b.classList.add('active');
     state.lang = b.dataset.lang;
     document.documentElement.lang = state.lang;
@@ -1477,10 +1897,18 @@ document.querySelectorAll('#langSeg button').forEach(b=>{
   });
 });
 
-document.getElementById('modeMonthAd').textContent = 'October';
-document.getElementById('modeMonthBs').textContent = 'असोज';
-document.getElementById('modeMonthNs').textContent = 'यँला';
+/* Keyboard navigation */
+document.addEventListener('keydown', e => {
+  if (['TEXTAREA','INPUT','SELECT'].includes(e.target.tagName)) return;
+  if (document.getElementById('modalBackdrop').classList.contains('open')) return;
+  if (e.key === 'ArrowRight') prevMonth && nextMonth();  // noop guard
+  if (e.key === 'ArrowRight') nextMonth();
+  else if (e.key === 'ArrowLeft') prevMonth();
+});
 
+/* ═══════════════════════════════════════════════════════
+   BOOT
+   ═══════════════════════════════════════════════════════ */
 renderAll();
 </script>
 </body>
